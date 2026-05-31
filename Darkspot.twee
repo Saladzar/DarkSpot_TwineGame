@@ -1,0 +1,390 @@
+:: StoryTitle
+Darkspot
+
+
+:: StoryData
+{
+  "ifid": "58F74513-F21E-4CFD-970D-41D0C66BC264",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Untitled Passage",
+  "zoom": 0.6
+}
+
+
+:: Agree? {"position":"6225,2950","size":"200,200"}
+Scraprat agrees that she should inspect him, he gets on a med bed while in severe pain, and Red draws near. Then extreme pain bursts forth from behind Scraprat's eyes as the alien burrows out of his one eye socket. Comet then almost immediately kicks the alien away and tries to shoot it multiple times with her gun. But the alien manages to escape into the ventilation system.
+[[Get acepted in tribe]]
+
+
+:: Bad End Death {"position":"3100,200","size":"100,100"}
+Damn only killed one.
+
+
+:: Beg for life {"position":"6100,2175","size":"100,200"}
+Scraprat begs Comet to spare him, trying to explain that there might be a why to cure him and get rid of the alien entirely.
+[[chrisma fail]] 
+
+
+:: Comet talks him down {"position":"6350,1775","size":"200,200"}
+They put their hands up and Comet tries to talk it out with Scraprat, explaining that he could be a threat to everyone. If he cares at all for the lives of people around him, he would realize that dying is the best option.
+[[ScrapRat "logs out"]]
+[[Struggle]]
+
+
+:: Dhi check {"position":"6075,3000","size":"100,100"}
+Does Scraprat let her inspect him?
+[[Agree?]]
+[[Disagree?]]
+
+
+:: Disagree? {"position":"6175,3200","size":"200,200"}
+Scraprat refuses to be inspected and the pain finally goes away. Comet understands that the alien would probably not let people get too close. She then asks Red if there are any other options. She then explains that the alien's influence probably strengthens the longer it goes on, since it eats away the brain. But if the host realizes what is happening early enough, they would be able to resist the alien much more, as Scraprat has. So, to ensure that the alien can't simply find a new ignorant host, they should explain the situation when they get back to the rest.
+[[The fear is real]]
+
+
+:: Does ScrapRat kill woman {"position":"4200,675","size":"100,100"}
+Does Scraprat kill her as well?
+[[is horrified that he wants to kill Victor and runs awy]] 
+
+
+:: Does Scraprat finish Victor of then and there? {"position":"2200,200","size":"100,100"}
+[[kill]]
+[[Not kill]]
+
+
+:: First indecation that something is wrong {"position":"1600,200","size":"200,200"}
+Scraprat pushes Victor's head into the gamma closet, only for a moment. This causes Victor to convulse and lose consciousness almost immediately. The only reason he doesn't die is because it was a short duration of exposure.
+[[What have i done .JPG]]
+
+
+:: Get acepted in tribe {"position":"6525,2925","size":"200,200"}
+Comet curses and says that they will have to survive with that thing around for several hours while they wait for the gamma storm to pass. Red offers some treatment to Scraprat's ruined eye and finally wraps a bandage around his head, apologizing that there isn't anything better.
+[[Must work more on this one ]]
+
+
+:: Gets found out {"position":"2550,200","size":"200,200"}
+As Scraprat is holding Victor's head inside of the gamma closet, a woman walks in and asks about the noise. She sees Scraprat killing Victor and immediately takes out her gun in a panic.
+[[ScrapRat gets gankd]]
+
+
+:: Gets help {"position":"2575,425","size":"200,200"}
+Woman almost immediately arrives and asks what happened. Player is given dialogue options that only affect trust levels. But he claims it was an accident of Victor.
+[[found out wat can be done]]
+
+
+:: Gets split up and devided with other peaple {"position":"1100,200","size":"200,200"}
+Victor is passively aggressive with Scraprat, not liking his Vox origins. He makes hostile jokes, pokes fun at him, and is sometimes just outright insulting.
+[[ScrapRat angry]]
+
+
+:: Gives gun {"position":"7675,2050","size":"200,100"}
+Comet crawls closer to him, picks up the gun, and offers it to him, saying that he knows what he should do.
+[[Kill my self?]]
+
+
+:: Inspection {"position":"5775,3000","size":"200,200"}
+Comet asks Red if she thinks there is anything they can do. Red explains that she knows very little of the alien, and would probably need to inspect Scraprat personally to see if she can find out more. The voice in his head then freaks out, ordering him not to let her near, or it will kill him and her. Scraprat gets a terrible migraine.
+[[Dhi check]]
+
+
+:: Kill my self? {"position":"7950,1975","size":"100,100"}
+Does Scraprat kill himself?
+[[Kill's himself sad]]
+
+
+:: Kill's himself sad {"position":"7950,2100","size":"200,100"}
+Scraprat nods slowly, and takes the gun from Comet. He takes a moment, then says thank you, and shoots himself in the head.
+
+
+:: Low trust {"position":"4475,675","size":"200,200"}
+Comet does not trust him enough and turns down his request to go back. She reasons that it is not only a waste of time, but the upcoming plasma storm would make them stuck at the other sector.
+
+
+:: Majer clue {"position":"4600,1025","size":"200,200"}
+The group takes a crawler back to the other sector and heads to the area where Scraprat has a gap in his memory. Mac is a little frustrated since he was here and didn't see anything of worth.
+[[Second majer clue]]
+
+
+:: Meets with group {"position":"900,200","size":"100,200"}
+While with big group, split up into smaller groups to scour area. Scraprat is grouped with Victor, and head to medical bay area.
+[[Gets split up and devided with other peaple]]
+
+
+:: Must work more on this one\  {"position":"6775,2925","size":"100,100"}
+I think he just dies gang.
+
+
+:: No Kill sadge {"position":"7625,1825","size":"200,200"}
+Comet tries to convince Scraprat that what he is doing is wrong, and he should remember what he is working toward: his wife and daughter. Scraprat drops the gun and bursts into tears.
+[[Gives gun]]
+
+
+:: No fucken die's {"position":"7250,1725","size":"200,100"}
+Scraprat fails in defending himself and Comet finally shoots him in the stomach. She then finishes him off.
+
+
+:: No keep it secret {"position":"5100,1425","size":"200,200"}
+Scraprat keeps the corpse a secret, reentering the bad path. He decides that if the others find out he is infected, they will kill him. Two options remain: Kill everyone to spare himself, or kill himself to spare the others.
+[[Temp ending work more on it]]
+
+
+:: Not kill {"position":"2400,425","size":"100,100"}
+Scraprat suppresses the foreign urge to kill Victor and calls for help.
+[[Gets help]]
+
+
+:: Oh no scitso time {"position":"4600,1500","size":"200,200"}
+Voice in his head immediately reacts, saying that if the other find the corpse, he will be found out. Scraprat then suddenly remembers how he had found the body, and a creature crawled out to pounce on him. He then finally realizes that there is some sort of alien affecting him.
+[[Show that body!]]
+
+
+:: RUN {"position":"5850,2600","size":"100,100"}
+Scraprat realizes that he will be killed if he doesn't do something.
+[[What he do to live?]]
+
+
+:: Roll for initiative {"position":"6950,1875","size":"100,100"}
+Does Scraprat manage to defend himself?
+[[No fucken die's]]
+[[Yes no diff]]
+
+
+:: ScrapRat "logs out" {"position":"6475,2025","size":"200,100"}
+Scraprat finally realizes that dying is the only option. After long consideration, he decides to shoot himself.
+
+
+:: ScrapRat Goes to starting erea {"position":"4125,800","size":"200,200"}
+Scraprat decides that he has to go back to the starting area where the gap in his memory is to see if there are any clues there. He asks Comet if it is possible to go back since he thinks there may actually have been good loot there.
+[[Trust value check]]
+
+
+:: ScrapRat angry {"position":"1400,200","size":"100,200"}
+Scraprat gets angry. Victor and him find a gamma closet. Victor opens it for fun and teases about how he could die if he sticked his head in there.
+[[First indecation that something is wrong]]
+
+
+:: ScrapRat becomes paranoid {"position":"4150,450","size":"200,100"}
+Scraprat becomes paranoid that the woman might be on to him, and considers killing her next to ensure he is safe from being found out.
+[[Does ScrapRat kill woman]]
+
+
+:: ScrapRat fix med stuff {"position":"6725,3200","size":"200,200"}
+Scraprat can then offer to help since he has extensive engineering experience, and he would be able to figure out where the power is supplied from and how to resupply it.
+[[Temp stuff fix]]
+
+
+:: ScrapRat gets gankd {"position":"2800,200","size":"200,200"}
+Scraprat lets go of Victor and puts his hands up. Player can try different dialogue options. The woman calls for help while keeping him at gun point. Others arrive and see what's happening. Comet arrives as well, and beats Scraprat up before shooting him in the skull.
+[[Bad End Death]]
+
+
+:: Second Trust value check {"position":"5375,2800","size":"100,100"}
+Does the group trust him enough?
+[[Trust check fail]]
+[[Trust check succeed]]
+
+
+:: Second majer clue {"position":"4600,1275","size":"200,200"}
+They split up a bit to scour, and Scraprat goes back to initial room to see if there are any clues. He gains flashes of memory, showing him a corner of crates and such that he had approached. He finds said crates, moves them out of the way, and finds a desecrated corpse.
+[[Oh no scitso time]]
+
+
+:: Self introspection {"position":"3875,750","size":"200,200"}
+Scraprat tries to chase the voice out and desperately tries to figure out what had changed. He then realizes there is a gap in his memory before Mac called for him. He concludes that something must have happened there, and something is terribly wrong with him.
+[[ScrapRat Goes to starting erea]]
+
+
+:: Show that body! {"position":"4900,1500","size":"100,100"}
+Does he call the rest to see the body?
+[[Yes show it off]]
+[[No keep it secret]]
+
+
+:: Struggle {"position":"6625,1725","size":"200,100"}
+Scraprat still refuses that he is meant to die, and Comet takes her chance to tackle him back and tries to get her gun back.
+[[action moves]]
+
+
+:: Tell the truth {"position":"5350,2550","size":"200,200"}
+Scraprat reveals to the rest that he believes he has been infected with the same alien creature as the corpse. He explains that he had a gap in his memory, but now remembers something attacking him. And since then, he has been feeling different.
+[[Second Trust value check]]
+
+
+:: Temp ending work more on it {"position":"5400,1400","size":"100,100"}
+A temp ending for now, we need to work on this one.
+
+
+:: Temp stuff fix {"position":"6950,3200","size":"200,100"}
+We can talk about how he was stopped i think or somthing stopping from continueing.
+
+
+:: The fear is real {"position":"6450,3200","size":"200,200"}
+Comet then voices her concern that other have become infected without their knowledge. Mac then suggests that it may be worth it to try and reactivate some of the higher-grade scanners in the mad bays to get more info on the alien without getting too close. The problem is that he isn't sure how they would go about doing that.
+[[ScrapRat fix med stuff]]
+
+
+:: The realisation of being taken over {"position":"5125,2125","size":"200,200"}
+Scraprat realizes what is happening to him and is told by the voice in his head that it is only making him better and stronger. He will be more happy if he embraces it. He will still be aware, but he will be changed for the better.
+[[choice of telling the others]]
+
+
+:: To kill or not to kill {"position":"7400,1900","size":"100,200"}
+The alien is elated and the voice in Scraprat's head praises him for his work, urging him to finish the job and kill Comet.
+[[make a choice to kill]]
+
+
+:: Tries to chrisma {"position":"6225,2500","size":"200,100"}
+Scraprat tries to convince them why killing him is not a good idea. He explains that shooting him may cause the alien to pop out and infect someone else.
+[[chrisma check]]
+
+
+:: Trust check fail {"position":"5575,2725","size":"200,200"}
+The group does not trust him and become very concerned. Red voices her concern that if it infected Scraprat, it could infect more people. She goes down a line of reasoning that it may be why the whole facility was abandoned despite its use. Comet then decides it would be better to kill Scraprat before more people die.
+[[RUN]]
+
+
+:: Trust check succeed {"position":"5525,3025","size":"200,200"}
+The group has begun to trust and like Scraprat more. They become very concerned, Red theorizes what risks the alien poses to others, but the group decides that it is worth it to see if they can help him in some way. Comet says bluntly that it would probably be smarter to kill Scraprat right now, but admits that she would rather not.
+[[Inspection]]
+
+
+:: Trust value check {"position":"4400,925","size":"100,100"}
+Does team trust him enough to go back?
+[[Low trust]]
+[[high trust]]
+
+
+:: Untitled Passage {"position":"700,200","size":"100,200"}
+Mac calls Scraprat to board crawler and head to other sector of facility to join up with Comet and the rest
+[[Meets with group]]
+
+
+:: What have i done .JPG {"position":"1900,200","size":"200,200"}
+Scraprat is horrified about what he has done. He is both disgusted with himself and deadly afraid of what the others might do to him if they find out. If Victor wakes up and tells the others, Scraprat is dead.
+[[Does Scraprat finish Victor of then and there?]]
+
+
+
+:: What he do to live? {"position":"6050,2475","size":"100,200"}
+Does Scraprat beg for his life, does he try to convince them that killing him is a bad idea, or does he attempt to fight his way out?
+[[Tries to chrisma]]
+[[Beg for life]]
+[[attack to live]]
+
+
+:: Yes KILL! {"position":"7650,2225","size":"100,100"}
+
+
+
+:: Yes no diff {"position":"7125,1900","size":"200,100"}
+Scraprat manages to defend himself, and in doing so kill both Mac and Red, and injuring Comet severely.
+[[To kill or not to kill]]
+
+
+:: Yes show it off {"position":"5050,1650","size":"200,200"}
+Scraprat calls the rest over to show the body to them. They are shocked and immediately investigate. They find a med bay and Red does an autopsy with the available equipment. She complains that this isn't part of her expertise.
+[[crazy lore dump on god]]
+
+
+:: action moves {"position":"6950,1725","size":"200,100"}
+Scraprat then fights them and player is given multiple action options to try and defend themself.
+[[Roll for initiative]]
+
+
+:: attack to live {"position":"6050,1775","size":"200,200"}
+Scraprat decides that there is no other choice, and tackles Comet before she can draw her gun. He grabs her gun before she can shove him away. Mac grab him then, and Scraprat shoots him in the stomach, making him recoil. Scraprat then keeps the group at gun point as he backs away.
+[[Comet talks him down]]
+
+
+:: calms down {"position":"3600,750","size":"200,200"}
+Scraprat tries to calm himself down and tries to figure out what is wrong with him all of a sudden. He then realizes that he has been hearing a subtle voice in his head, urging him to kill.
+[[Self introspection]]
+
+
+:: choice of telling the others {"position":"5175,2350","size":"100,200"}
+Does Scraprat reveal to the others that he thinks he is infected with he same thing as the corpse was?
+[[keep it a secret]]
+[[Tell the truth]]
+
+
+:: chrisma check {"position":"6525,2550","size":"100,100"}
+Does Scraprat manage to convince them?
+[[succeed Chrisma]]
+[[chrisma fail]]
+
+
+:: chrisma fail {"position":"6525,2325","size":"100,100"}
+Comet is unconvinced, apologizes, and shoot him in the skull to kill the alien.
+
+
+:: crazy lore dump on god {"position":"5100,1875","size":"200,200"}
+Red reveals that there is traces of foreign biomatter on the corpse and in his brain. She explains that something very strange had happened to his brain: it had been systematically eaten away and rebuilt. She concludes that there is something non-human to do with the corpse.
+[[The realisation of being taken over]]
+
+
+:: does he kill Vic? {"position":"3150,425","size":"100,200"}
+Scraprat becomes paranoid that Victor might wake up and tell everyone about what happened. He considers once again to finish Victor off.
+[[searces for a weapon or instrement to kill Victor]]
+[[is horrified that he wants to kill Victor and runs awy]]
+
+
+:: found out wat can be done {"position":"2850,425","size":"200,200"}
+Victor is put on a medical bed, and Red arrives, their biomedical engineer. She checks on him and confirms that he has severe gamma radiation damage to his brain. People look around for the meds and equipment she needs. She gives him some meds, and uses scanners to identify extent of brain damage. She then says that with the limited tools they are able to use, his chances aren't great, but they're better than nothing.
+[[does he kill Vic?]]
+
+
+:: high trust {"position":"4600,900","size":"100,100"}
+Comet hesitantly agrees and allows Scraprat to go back via crawler. She explains the situation to the captain, then she, Mac, and Red go with Scraprat. They would be stuck there for a day because of the plasma storm.
+[[Majer clue]]
+
+
+:: is horrified that he wants to kill Victor and runs awy {"position":"3250,700","size":"200,100"}
+Scraprat horrifies himself again with these intrusive thoughts and heads to a restroom where he does some introspection.
+[[calms down]]
+
+
+:: keep it a secret {"position":"5425,2350","size":"100,100"}
+Scraprat keeps it a secret.
+[[makes big choice on what to do]]
+
+
+:: kill {"position":"2400,200","size":"100,200"}
+Scraprat pick up Victor's body and shoves is head back into the gamma closet, feeling oddly satisfied with melting the man's brain.
+[[Gets found out]]
+
+
+:: lady is suspicious {"position":"3875,450","size":"200,200"}
+Since Victor already had a chance to die from radiation damage, it does not seem odd that he did not survive. But the woman becomes a little suspicious of Scraprat, giving him strange looks.
+[[ScrapRat becomes paranoid]]
+
+
+:: make a choice to kill {"position":"7400,2125","size":"100,100"}
+Does Scraprat kill Comet?
+[[Yes KILL!]]
+[[No Kill sadge]]
+
+
+:: makes big choice on what to do {"position":"5600,2275","size":"200,100"}
+Does he want to protect himself, or does he wish to embrace the alien?
+
+
+:: searces for a weapon or instrement to kill Victor {"position":"3375,325","size":"100,200"}
+Does he use a plasma knife, or an x-ray emitter?
+[[uses plasma knife]]
+[[uses X-ray emitter]]
+
+
+:: succeed Chrisma {"position":"6725,2675","size":"200,100"}
+Comet considers what Scraprat is saying, and decides to give him a chance.
+[[Inspection]] 
+
+
+:: uses X-ray emitter {"position":"3600,450","size":"200,200"}
+Scraprat uses a strong x-ray emitter to cause even more radiation damage to Victor's head, causing him to further convulse and eventually flatline after some time. Scraprat enjoys every moment.
+[[lady is suspicious]]
+
+
+:: uses plasma knife {"position":"3575,100","size":"200,200"}
+Scraprat uses a plasma knife to brutally slaughter Victor in his med bed. People find his brutalized body. The woman who found him initially claims that Scraprat might have tried to kill originally, failed, and now finished it off. Comet points out a small splatter of blood on Scraprat's clothing. Beats him up and kills him
+[[Bad End Death]] 
