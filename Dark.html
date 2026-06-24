@@ -580,13 +580,13 @@ Is it worth checking?
 *Yes*
 
 [[Tell Maia]]
-[[Check without telling]]</tw-passagedata><tw-passagedata pid="35" name="Tell Maia" tags="" position="1775,1950" size="100,100">&quot;I heard something from that room.&quot; Your voice is soft.
+[[Check without telling]]</tw-passagedata><tw-passagedata pid="35" name="Tell Maia" tags="" position="1775,2050" size="100,100">&quot;I heard something from that room.&quot; Your voice is soft.
 
 She keeps walking. She didn&#39;t hear. No matter.
 
 You turn to the disposal room.
 
-[[Enter the room]]</tw-passagedata><tw-passagedata pid="36" name="Check without telling" tags="" position="1875,2100" size="100,100">Maia keeps walking. You don&#39;t stop her.
+[[Enter the room]]</tw-passagedata><tw-passagedata pid="36" name="Check without telling" tags="" position="1900,2150" size="100,100">Maia keeps walking. You don&#39;t stop her.
 
 You turn to the disposal room.
 
@@ -1103,7 +1103,7 @@ You both head to the door.
 
 [[Go to Mac]]
 
-(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="74" name="Go to Mac" tags="" position="3875,1050" size="100,100">&quot;The fuck is that?&quot;
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="74" name="Go to Mac" tags="" position="3900,1050" size="100,100">&quot;The fuck is that?&quot;
 
 You don&#39;t know what you expected.
 
@@ -1155,7 +1155,9 @@ Comet steps over to the bed. She looks down at Victor, then up at you.
 Maia steps closer, too.
 
 [[&quot;He attacked me&quot;]]
-[[&quot;It was an alien&quot;]]</tw-passagedata><tw-passagedata pid="77" name="&quot;He attacked me&quot;" tags="" position="2675,1475" size="100,100">&quot;He attacked me while I was separated from Maia.&quot;
+[[&quot;It was an alien&quot;]]
+
+(set: $decription to false)</tw-passagedata><tw-passagedata pid="77" name="&quot;He attacked me&quot;" tags="" position="2675,1475" size="100,100">&quot;He attacked me while I was separated from Maia.&quot;
 
 Everyone stays quiet for a moment. Red returns with supplies and start working on Victor.
 
@@ -1265,6 +1267,7 @@ She sighs.
 [[&quot;Small&quot;]]
 
 (set: $description to true)
+(set: $correct to true)
 (set: $trust to it -1)</tw-passagedata><tw-passagedata pid="83" name="&quot;Maybe I&#39;m wrong&quot;" tags="" position="3025,1300" size="100,100">&quot;Maybe I didn&#39;t see it correctly. I don&#39;t know. I just saw... something. And found Victor on the ground. My mind may have fabricated the rest.&quot;
 
 Comet considers. &quot;I guess you do have reason to be paranoid...&quot;
@@ -1288,7 +1291,7 @@ Comet still looks at you.
 [[&quot;Like an insect&quot;]]
 [[&quot;Like an animal&quot;]]
 
-(set: $description to false)</tw-passagedata><tw-passagedata pid="85" name="&quot;Small&quot;" tags="" position="3400,1075" size="100,100">&quot;It was small. Smaller than a human. But quick.&quot;
+(set: $correct to false)</tw-passagedata><tw-passagedata pid="85" name="&quot;Small&quot;" tags="" position="3400,1075" size="100,100">&quot;It was small. Smaller than a human. But quick.&quot;
 
 &quot;Small...? The one I saw was pretty big...&quot; Maia comments.
 
@@ -1305,7 +1308,7 @@ Comet nods slowly, her eyes never leaving you. &quot;I see. Well, I guess we sho
 
 [[Nod]]
 
-(set: $description to false)</tw-passagedata><tw-passagedata pid="87" name="&quot;Like an insect&quot;" tags="" position="3400,1200" size="100,100">&quot;It looked almost insect-like. Sharp limbs and mandibles. No fur.&quot;
+(set: $correct to false)</tw-passagedata><tw-passagedata pid="87" name="&quot;Like an insect&quot;" tags="" position="3400,1200" size="100,100">&quot;It looked almost insect-like. Sharp limbs and mandibles. No fur.&quot;
 
 &quot;Yeah, mine looked like that, too. Gross...&quot; Maia adds.
 
@@ -1315,15 +1318,15 @@ Comet nods slowly, her eyes never leaving you. &quot;I see. Well, I guess we sho
 
 Maia reaches out to stop you, but thinks better of it.
  
-You&#39;re not scared.
- 
-It seems familiar in a way.
+You&#39;re not scaredof it.
+
+You&#39;ve never seen anything like it before. Yet it seems somewhat familiar.
  
 Comet looks down at you, then back at Kayne. &quot;You think this killed Lavos?&quot;
 
 Kayne shrugs. &quot;If it did, I got some weak boys in my crew.&quot;
 
-(if: $VictorDeath = true)[Comet glances around. &quot;Where&#39;s Victor?&quot;
+(if: $VictorDeath is true)[Comet glances around. &quot;Where&#39;s Victor?&quot;
 
 Mac snorts. &quot;Ran off ages ago. We were actually looking for him when this happened.
 
@@ -1338,9 +1341,94 @@ You stay quiet.
 Movement.
 
 [[&quot;Did that thing just move?&quot;]]
-[[Say nothing]]</tw-passagedata><tw-passagedata pid="89" name="See where it came from" tags="" position="4050,1175" size="100,100">You step closer to the creature. You glance around.
+[[Say nothing|Say nothing1]]</tw-passagedata><tw-passagedata pid="89" name="See where it came from" tags="" position="4050,1175" size="100,100">You step closer to the creature. You glance around.
 
-</tw-passagedata><tw-passagedata pid="90" name="Say nothing" tags="" position="4050,1300" size="100,100"></tw-passagedata><tw-passagedata pid="91" name="&quot;Did that thing just move?&quot;" tags="" position="3900,1300" size="100,100"></tw-passagedata><tw-passagedata pid="92" name="&quot;Even after what happened?&quot;" tags="" position="875,1750" size="100,100">&quot;Even after what happened?&quot;
+There are many shelves and crates it could have used to hide.
+
+It could have come from anywhere.
+
+Comet looks at you, then back at Kayne. &quot;You think this killed Lavos?&quot;
+
+Kayne shrugs. &quot;If it did, I got some weak boys in my crew.&quot;
+
+(if: $VictorDeath is true)[Comet glances around. &quot;Where&#39;s Victor?&quot;
+
+Mac snorts. &quot;Ran off ages ago. We were actually looking for him when this happened.&quot;
+
+&quot;Shit...&quot;](else:)[Mac steps forward. &quot;You guys seen Victor, by the way? Ran off ages ago. We were looking for him when this shit happened.&quot;
+
+You feel Comet&#39;s eyes for a split second. &quot;Yeah, actually. He got hurt. Red&#39;s taking care of him.&quot;
+
+Kayne snorts. &quot;Fucking idiot...&quot;]
+
+You stay quiet.
+
+Movement.
+
+(if: $influence &lt; 8)[[&quot;Did that thing just move?&quot;]](else:)[[&quot;Did that thing just move?&quot;|Say nothing1.5]]
+[[Say nothing|Say nothing1]]</tw-passagedata><tw-passagedata pid="90" name="Say nothing1" tags="" position="4050,1300" size="100,100">You don&#39;t say anything.
+
+You don&#39;t want to.
+
+The creature springs up right next to you.
+
+And rushes past.
+
+It pounces directly at Maia, its mandibles primed to taste flesh.
+
+A scream erupts from her deep inside her throat.
+
+Blood spills as the creature latches onto Maia&#39;s arm and carves away at her.
+
+&quot;Maia!&quot; Comet rushes to her.
+
+A bang.
+
+A thud.
+
+The creature lies motionless on the floor again.
+
+Maia stumbles into Comet&#39;s arms.
+
+Kayne steps over to it.
+
+Another bang.
+
+And another bang.
+
+He stows his pistol.
+
+[[Check on Maia|Maia Bad]]
+[[Say nothing|Say nothing2]]
+
+(set: $MaiaHealthy to false)</tw-passagedata><tw-passagedata pid="91" name="&quot;Did that thing just move?&quot;" tags="" position="3900,1300" size="100,100">&quot;Did that thing just fucking move?&quot;
+
+All heads turn to you in an instant.
+
+The creature springs up right next to you.
+
+And rushes past.
+
+It pounces directly at Maia, its mandibles primed to taste flesh.
+
+A bang.
+
+A thud.
+
+The creature lies motionless on the floor once again.
+
+Kayne steps over to it.
+
+Another bang.
+
+And another bang.
+
+He stows his pistol.
+
+[[Check on Maia|Maia Good]]
+[[Say nothing|Say nothing2]]
+
+(set: $MaiaHealthy to true)</tw-passagedata><tw-passagedata pid="92" name="&quot;Even after what happened?&quot;" tags="" position="875,1750" size="100,100">&quot;Even after what happened?&quot;
 
 Her eyes narrow. &quot;We always knew this job was dangerous. And we don&#39;t even know what happened. As much as it pains me, one death is not reason enough to abandon this. Too much has gone into it.&quot;
 
@@ -1398,7 +1486,7 @@ You don&#39;t know if she&#39;s joking.
 &quot;You were covered in cuts. Strange shapes.&quot;
 
 [[&quot;What was strange?&quot;]]
-[[&quot;At least I&#39;m alive&quot;]]</tw-passagedata><tw-passagedata pid="96" name="&quot;What was strange?&quot;" tags="" position="1000,1875" size="100,100">&quot;What was strange about them?&quot;
+[[&quot;At least I&#39;m alive&quot;]]</tw-passagedata><tw-passagedata pid="96" name="&quot;What was strange?&quot;" tags="" position="1025,1825" size="100,100">&quot;What was strange about them?&quot;
 
 She shrugs. &quot;Just strange. Alien must have had very jagged claws or something.&quot;
 
@@ -1436,7 +1524,65 @@ She steps back from your bed.
 
 You slide out of the bed. The pain is less than you thought it would be.
 
-[[Head to the lobby]]</tw-passagedata></tw-storydata>
+[[Head to the lobby]]</tw-passagedata><tw-passagedata pid="98" name="Say nothing2" tags="" position="4050,1425" size="100,100"></tw-passagedata><tw-passagedata pid="99" name="Say nothing1.5" tags="" position="4200,1300" size="100,100">You open your mouth to speak. But the words don&#39;t come out.
+
+You don&#39;t want them to.
+
+The creature springs up right next to you.
+
+And rushes past.
+
+It pounces directly at Maia, its mandibles primed to taste flesh.
+
+A scream erupts from deep inside her throat.
+
+Blood spills as the creature latches onto Maia&#39;s arm and carves away at her.
+
+&quot;Maia!&quot; Comet rushes to her.
+
+A bang.
+
+A thud.
+
+Maia stumbles into Comet&#39;s arms.
+
+The creature lies motionless on the floor again.
+
+Kayne steps over to it.
+
+Another bang.
+
+And another bang.
+
+He stows his pistol.
+
+[[Check on Maia|Maia Bad]]
+[[Say nothing|Say nothing2]]
+
+(set: $MaiaHealthy to false)</tw-passagedata><tw-passagedata pid="100" name="Maia Good" tags="" position="3900,1425" size="100,100">You rush to Maia&#39;s side.
+
+&quot;You okay?&quot;
+
+She nods her head, but she looks unsure. &quot;I... I think so...&quot;
+
+It happened so fast. She didn&#39;t even have time to scream.
+
+Comet places a hand on Maia&#39;s shoulder. &quot;Good job on the warning, Scrap.&quot;
+
+&quot;Agreed.&quot; Kayne kicks the corpse. &quot;But at the same time... You shouldn&#39;t be standing there all happy and unscathed. This oversized roach went for the girl... while you were right next to it.&quot;
+
+His eyes narrow.
+
+[[&quot;Maybe it prefers women&quot;]]
+[[&quot;What are you suggesting?&quot;]]
+
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="101" name="Maia Bad" tags="" position="4200,1425" size="100,100">Before you can reach Maia, Kayne steps in front of you.
+
+&quot;You a blind motherfucker, or just a motherfucker?&quot;
+
+Heads turn to you. You take a step back.
+
+Kayne takes a step closer. &quot;Not only did it ignore you completely, but you let it attack the girl without a fucking word.&quot;</tw-passagedata><tw-passagedata pid="102" name="&quot;Maybe it prefers women&quot;" tags="" position="3837.5,1550" size="100,100"></tw-passagedata><tw-passagedata pid="103" name="&quot;What are you suggesting?&quot;" tags="" position="3962.5,1550" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
