@@ -3,434 +3,1982 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>Dark Planning</title>
+<title>Dark Full</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 50%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0.25) 0%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Dark Planning.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Dark Planning" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="809151B3-8139-4EA3-83FE-7C0E78024D1B" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Beginning" tags="" position="900,400" size="100,100">A horrible stench assaults you as your senses return. Someone is shouting your name at you, but you can barely make out anything else they are saying.
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Dark Full.</tw-noscript></noscript></tw-story>
+<tw-storydata name="Dark Full" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="B6BA8073-9B96-46BB-93DB-74D6EB580CDF" options="" tags="" zoom="0.3" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-&quot;Scraprat! Wh... ha...ened!?&quot;
+tw-passage{
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
 
-You struggle to see them through the haze covering your vision, and the shouting sends a painful ringing through your head. They grab you by the shoulders and shake you aggressively, not giving you a moment to recover.
+em, i, .italic {
+  font-size: 80%;
+}
 
-[[Shove them away]]
-[[Try to listen]]
+tw-story {
+  position: relative;
+  background-color: transparent !important;
+}
+
+tw-story[tags~="lavos"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/intro.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+tw-story[tags~="medbay"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/medbay.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+tw-story[tags~="lobby"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/doors.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -1;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Lavos" color="green"></tw-tag><tw-tag name="lavos" color="red"></tw-tag><tw-tag name="medbay" color="green"></tw-tag><tw-tag name="lobby" color="blue"></tw-tag><tw-tag name="hallway" color="orange"></tw-tag><tw-tag name="disposal" color="purple"></tw-tag><tw-tag name="gore" color="yellow"></tw-tag><tw-tag name="victor" color="red"></tw-tag><tw-tag name="storage" color="yellow"></tw-tag><tw-passagedata pid="1" name="Begin" tags="lavos" position="800,600" size="100,100">Crimson obscures your vision. It rolls down your face and seeps into your eyes. It stings. But you can&#39;t seem to blink.
+
+&quot;Scraprat!&quot;
+
+Your muscles spasm. You&#39;re cold. 
+
+No. 
+
+You&#39;re warm. A thousand knives pierce your flesh.
+
+&quot;Snap out of it!&quot;
+
+[[Move your fingers]]
 
 (set: $trust to 0)
-(set: $influence to 0)</tw-passagedata><tw-passagedata pid="2" name="Shove them away" tags="" position="825,525" size="100,100">Annoyed by the incessant shaking, you push them away with a groan of effort.
+(set: $influence to 0)</tw-passagedata><tw-passagedata pid="2" name="Move your fingers" tags="lavos" position="800,725" size="100,100">Your fingers move. They&#39;re wet. Something shakes you by the shoulders.
 
-&quot;Don&#39;t push me, scrap fucker! You&#39;re not getting out of this!!&quot;
+&quot;What happened, you fucker!&quot;
 
-They close the distance again immediately, and grab you by the collar of your jacket. The ringing in your head grows in intensity, forcing a wince on your face.
+What happened? A voice. It pushes at the inside of your skull.
 
-Your vision finally clears up enough for you to barely recognize the man in front of you - Victor. You have always hated him, but in this moment, he wears an expression that shows a strange mixture of frustration, confusion, and a hint of fear.
+[[Try to listen]]
+[[Struggle|StruggleOG]]</tw-passagedata><tw-passagedata pid="3" name="Try to listen" tags="lavos" position="725,850" size="100,100">You try to listen to it. The ringing makes it difficult. You can barely make out a face in front of you.
 
-[[&quot;Let go of me!&quot;]]
-[[&quot;What happened..?&quot;]]
+&quot;What the fuck happened to Lavos!?&quot;
 
-(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="3" name="Try to listen" tags="" position="975,525" size="100,100">You wince as you try to tune out the buzzing in your ears to focus on what the person is saying.
+Lavos... Your head turns to the side. A red mass shines through the haze.
 
-&quot;Wake the hell up, rat! Before I do something you&#39;ll regret.&quot;
+Bone protrudes from flesh, blood pours from open wounds. A mangled face bores into you with a blank, deathly stare.
 
-They  grab you by the collar of your jacket and tug you toward them in a threat. 
+[[Look away]]
+[[Keep looking]]</tw-passagedata><tw-passagedata pid="4" name="StruggleOG" tags="lavos" position="875,850" size="100,100">You struggle against the grip on your shoulders. It tightens. You can barely make out a face in front of you.
 
-Your vision finally clears up enough for you to barely recognize the man in front of you - Victor. You have always hated him, but in this moment, he wears an expression that shows a strange mixture of frustration, confusion, and a hint of fear.
+&quot;Tell me what the fuck happened to Lavos!&quot;
 
-[[&quot;Let go of me!&quot;]]
-[[&quot;What happened..?&quot;]]</tw-passagedata><tw-passagedata pid="4" name="&quot;Let go of me!&quot;" tags="" position="825,650" size="100,100">&quot;Let go of me!&quot; you shout back at him, desperate to collect your thoughts.
+Lavos... Your head turns to the side. A red mass shines through the haze.
 
-&quot;Like hell I will. Not untill you tell me what the fuck happened to Lavos!&quot;
+Bone protrudes from flesh, blood pours from open wounds. A mangled face bores into you with a blank, deathly stare.
 
-Victor throws a finger toward a red mass in your peripheral. Confused, you turn your head to look at it, and are greeted with the most horrifying image you&#39;ve ever born witness to.
+[[Look away]]
+[[Keep looking]]
 
-A brutalized corpse, a grotesque mimcry of what it used to be, lies in a heap on the ground a mere three meters away from you. Bone protrudes proudly from torn flesh, viscera seeps from gaping wounds, and a mangled face bores into you with a blank, deathly stare. Nothing but the ruined jacket remains to tell you who this corpse used to be.
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="5" name="References" tags="" position="425,950" size="100,100">Reference List:
+```
+Aliakbari, A. (2020, January 18). Lukisan abstrak merah dan putih. [Photograph] Unsplash.com;
+Unsplash. https://unsplash.com/id/foto/lukisan-abstrak-merah-dan-putih-l2VUdi6ZrUE
 
-[[&quot;Is that Lavos...?&quot;]]
+blood. (2026, June 23). Flickr; blood | Down Town Expo - Abdulaziz Al-Juraib | D.Al-Ansari | [Photograph]
+Flickr. https://www.flickr.com/photos/61763924@N07/5697244535/
 
-(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="5" name="&quot;What happened..?&quot;" tags="" position="975,650" size="100,100">&quot;What happened..?&quot; you manage to mumble, trying to collect your scattered thoughts through the daze.
+Blood Hell. (2026, June 23). Flickr; Blood Hell | This is H*K in the bloody flesh dying in my x’s… |
+[Photograph] Flickr. https://www.flickr.com/photos/heppxkatt/2710790633/
 
-&quot;That&#39;s my line, you son of a bitch. &quot;What the fuck happened to Lavos!?&quot;
+Carpaccio, I. (2020, July 16). brown and black spider on web in close up photography during daytime.
+[Photograph] Unsplash.com; Unsplash.
+https://unsplash.com/photos/brown-and-black-spider-on-web-in-close-up-photography-during-daytime-YO
+PWoEm72_w
 
-Victor throws a finger toward a red mass in your peripheral. Confused, you turn your head to look at it, and are greeted with the most horrifying image you&#39;ve ever born witness to.
+dissection 015. (2026, June 23). Flickr; dissection 015 | Pazit Polak | [Photograph] Flickr.
+https://www.flickr.com/photos/pazit/305172541/
 
-A brutalized corpse, a grotesque mimcry of what it used to be, lies in a heap on the ground a mere three meters away from you. Bone protrudes proudly from torn flesh, viscera seeps from gaping wounds, and a mangled face bores into you with a blank, deathly stare. Nothing but the ruined jacket remains to tell you who this corpse used to be.
+dodo71. (2020, April 13). Statue Man Cross - Free photo on Pixabay. [Photograph] Pixabay.com.
+https://pixabay.com/photos/statue-man-cross-crucified-jesus-5033155/
 
-[[&quot;Is that Lavos...?&quot;]]</tw-passagedata><tw-passagedata pid="6" name="&quot;Is that Lavos...?&quot;" tags="" position="900,775" size="100,100">You can hardly believe what you&#39;re looking at. &quot;Is that Lavos...?&quot; is all you are able to say.
+Dumlao, N. (2020, July 20). red plastic trash bins on street. [Photograph] Unsplash.com; Unsplash.
+https://unsplash.com/photos/red-plastic-trash-bins-on-street-OLIYwomX4CQ
 
-&quot;OF COURSE IT&#39;S FUCKING LA-&quot;
+Fake blood set photography. (2026, June 23). Flickr; Fake blood set photography | Lauren Adams |
+[Photograph] Flickr. https://www.flickr.com/photos/freckles1315/4555595556/in/dateposted/
 
-&quot;Victor, could you shut the fuck up for once?&quot; Comet steps into your vision from behind Victor, her arms crossed and a grim expression on her face. She&#39;s trying not to let her emotions slip. You can tell from the way her jaw tenses under the skin of her cheek. &quot;Scraprat won&#39;t give you shit while he&#39;s like that. Whatever happened here, it got him too.&quot;
+Frentescu, A. (2021, September 20). Milky way over Person at Night · Free Stock Photo. [Photgraph]
+Pexels. https://www.pexels.com/photo/milky-way-over-person-at-night-9598256/
 
-Somehow, you only now notice the blood and many wounds all over you. Crimson stains your clothes and massive gashes are scattered across your skin. Your body burns from the pain of your injuries. Your teeth grind against each other as you try to work through the pain, a coppery taste tainting every corner of your mouth.
+Hanaoka, P. (2020, January 27). a long hallway with glass doors leading to another room. [Photograph]
+Unsplash.com; Unsplash.
+https://unsplash.com/photos/a-long-hallway-with-glass-doors-leading-to-another-room-s0XabTAKvak
 
-&quot;You&#39;re just gonna let him off like that!? Lavos is a pile of meat right now, and I only see one person covered in blood!&quot; Victor argues back.
+Jr Korpa. (2020, March). white and red abstract painting. [Photograph] Unsplash.com; Unsplash.
+https://unsplash.com/photos/white-and-red-abstract-painting-OyHwnqyujkw
 
-[[&quot;You think I killed him?&quot;]]
-[[Say nothing]]</tw-passagedata><tw-passagedata pid="7" name="&quot;You think I killed him?&quot;" tags="" position="825,900" size="100,100">Your mind is still foggy. The events prior to this moment escape you, but you know you didn&#39;t kill Lavos. Even if you wanted to, no man is capable of such brutality. &quot;You think I killed him?&quot;
+Newman, R. (2025, July 7). Vintage Naval Hospital Ship Interior with Medical Setup · Free Stock Photo.
+[Photograph] Pexels. https://www.pexels.com/photo/32898294/
 
-&quot;I already told you guys. I saw it! It was a monster!&quot; Maia chimes in from the side. You hadn&#39;t noticed her until now.
+Olichon, A. (2022, September 20). a hallway with doors. [Photograph] Unsplash.com; Unsplash.
+https://unsplash.com/photos/a-hallway-with-doors-56YPATRC_1I
 
-Victor throws up his arms in exasperation. &quot;Great, now we&#39;re turning fucking grey eyes.&quot;
+Voss, L. (2025, August 4). Abstract art with wavy lines and patterns. Unsplash.com; [Photograph]
+Unsplash. https://unsplash.com/photos/abstract-art-with-wavy-lines-and-patterns-JXebQRfg_EY
 
-&quot;I know what I saw, Victor! It had these huge claws and-&quot;
+Unsplash. (2015, December 27). Photo by NASA on Unsplash. [Photograph] Unsplash.com.
+https://unsplash.com/photos/photo-of-outer-space-Q1p7bh3SHj8
+```</tw-passagedata><tw-passagedata pid="6" name="Look away" tags="lavos" position="725,975" size="100,100">You try to tear your eyes away from it, but it won&#39;t let you go.
 
-&quot;I don&#39;t think Scraprat is capable of something like that,&quot; Comet finally agrees. &quot;And even if he were, he&#39;s pretty banged up himself. No way Lavos did that shit to him.&quot;
+It pulls you in further. Everything else is gone. 
 
-Victor seems unconvinced, but lets the matter die after one more poisonous glance your way.
+Just bone and ichor. 
 
-[[Continue]]</tw-passagedata><tw-passagedata pid="8" name="Say nothing" tags="" position="975,900" size="100,100">The accusation catches you off guard, but you&#39;re in too much pain and your mind is too foggy to defend yourself. Instead, you remain quiet.
+And that awful visage.
 
-Everyone stays silent for an uncomfortably long moment.
+It won&#39;t let you go.
 
-&quot;I already told you guys. I saw it! It was a monster!&quot; Maia finally chimes in from the side. You hadn&#39;t noticed her until now.
+[[Scream]]
+[[Scream]]</tw-passagedata><tw-passagedata pid="7" name="Keep looking" tags="lavos" position="875,975" size="100,100">You can&#39;t stop looking. It draws you in. The brutality won&#39;t let you go.
 
-Victor throws up his arms in exasperation. &quot;Great, now we&#39;re turning fucking grey eyes.&quot;
+It pulls you in further. Everything else is gone. Just bone and ichor. 
 
-&quot;I know what I saw, Victor! It had these huge claws and-&quot;
+And that awful visage.
 
-&quot;I don&#39;t think Scraprat is capable of something like that,&quot; Comet finally agrees. &quot;And even if he were, he&#39;s pretty banged up himself. No way Lavos did that shit to him.&quot;
+It won&#39;t let you go.
 
-Victor seems unconvinced, but lets the matter die after one more poisonous glance your way.
+[[Scream]]
+[[Scream]]</tw-passagedata><tw-passagedata pid="8" name="Scream" tags="medbay" position="800,1100" size="100,100">You open your mouth but no sound comes out. Lavos&#39; face laughs at you and embraces you with his twisted arms.
 
-[[Continue]]</tw-passagedata><tw-passagedata pid="9" name="Summary" tags="" position="250,1100" size="100,100">*Summary*
+You scream as you sit up with a start. The bed is soft beneath you.
 
-Comet eventually sends you to a med bay, saying that she&#39;ll send Red your way to check up on you.
+&quot;About time you woke up.&quot;
 
-You take a moment to go to a restroom where you splash your face with water to try and calm down. During this time, you notice a bad burn wound on your chest under your jacket. This alarms you, since it seems out of place among the cut wounds everywhere else. The only thing you can think of that could have caused a wound like that would be Lavos&#39; proton pistol.
+Comet stands in front of you, her arms crossed. Intense, green eyes look into your soul.
 
-You inevitably decide not to show Red when she finally arrives, knowing it looks bad for you, but your interactions here influence the trust value which may affect events later.
+&#39;&#39;You were out for a while.&quot;
 
-Afterward, the whole crew meets up so that Comet can fill everyone in on what had happened. This is another moment where you interact with various characters, potneitally affecting your trust value. Everyone is then split up into groups of two so that no one is alone, and you&#39;re grouped with Maia.
+A ruby haired woman is behind her - Red.
 
-While investigating with Maia, you split up for a moment so that you can search the disposal area. This is where Victor corners you, demanding answers as to what happened to Lavos. Getting a little aggressive, and grabbing your jacket, he spots your burn wound, and decides that you had doen something to his friend.
+[[&quot;Where am I?&quot;]]
+[[&quot;What happened?&quot;]]</tw-passagedata><tw-passagedata pid="9" name="&quot;Where am I?&quot;" tags="medbay" position="725,1225" size="100,100">&quot;Where am I...?&quot; Your voice is hoarse.
 
-You two get into a scuffle as he tries to get at you, and you manage to break the leg off a rusty trolley, and hit him across the head with it.
-You then get the option to keep hitting him. If you hit him too much, he dies.
+&quot;Where do you think, dipshit? Closest med bay we could find.&quot;
 
-[[Kill Victor]]
-[[Take Victor to Med Bay]]
-[[Leave Victor unconcious]]</tw-passagedata><tw-passagedata pid="10" name="Kill Victor" tags="" position="250,1225" size="100,100">You hit Victor again and again and can&#39;t stop yourself from pounding his head in. You get away from his body in a panic, make an excuse to Maia, and go to a restroom again to clean yourself up. To the others, Victor is missing. Later, they accept that he is probably dead. Killing Victor increases the influence the alien has over you, affecting future events.</tw-passagedata><tw-passagedata pid="11" name="Take Victor to Med Bay" tags="" position="375,1225" size="100,100">You stop yourself from hitting him again, noticing that he is knocked out cold and his head is bleeding. You immediately pick him up and rush him to the med bay for Red to check on him. It is inevitable that the others will find out you faught with Victor. But knowing Victor&#39;s personality and that he was already hostile toward you, you having knocked him out does not necessarily affect trust too much depending on your interactions. Victor will wake up hours later and put the other&#39;s trust in you to the test.</tw-passagedata><tw-passagedata pid="12" name="Leave Victor unconcious" tags="" position="125,1225" size="100,100">After hitting Victor on the head with a hard metal trolley leg, he is knocked unconcious, and you decide to get away while you can. Having been hit very hard, Victor won&#39;t wake up until hours later, at which point the other&#39;s trust in you will be put to the test.</tw-passagedata><tw-passagedata pid="13" name="Continue" tags="" position="900,1025" size="100,100">Comet sighs and pinches the bridge of her nose.
+It&#39;s dark and dusty. Hasn&#39;t been used in a long time.
 
-&quot;Maia, take Scraprat to that med bay we found. I&#39;ll send Red to check on him.&quot;
+&quot;What do you remember?&quot;
 
-&quot;What about Lavos&#39; body? We just leaving him here!?&quot; Victor asks.
-
-&quot;I&#39;ll have Red check on him as well. It&#39;d be best if we can find out what we&#39;re dealing with,&quot; Comet responds calmly.
-
-It seems as though Victor wants to say more, but he decides against it.
-
-With a curt gesture from Comet, Maia approaches you to lead you to the med bay.
-
-&quot;It&#39;s this way...&quot;
-
-Leaving the room does nothing to erase the gruesome image from your mind, however.
+Your memory is foggy.
 
 [[Try to remember]]
-[[Try to forget]]</tw-passagedata><tw-passagedata pid="14" name="Try to remember" tags="" position="825,1150" size="100,100">You walk with Maia in silence. Your footsteps echo through the metallic halls as the two of you traverse the abandoned facility.
+[[Try to forget]]</tw-passagedata><tw-passagedata pid="10" name="&quot;What happened?&quot;" tags="medbay" position="875,1225" size="100,100">&quot;What happened...?&quot; Your throat hurts.
 
-You and Lavos walked through a hallway exactly like this one. You remember the same echoing of footsteps. The same chemically scent. The same oppressive atmosphere of the megastructure. But the moment you managed to pry open a door, your memory goes dark.
+&quot;That&#39;s my line.&quot;
 
-All that came after was excruciating pain, like many knives piercing your flesh all at once. Pain... and the smell of blood.
+You&#39;re in a med bay. It&#39;s dark and dusty. Hasn&#39;t been used in a long time.
 
-You glance toward Maia at your side. She claimed that she had seen a monster. Perhaps she knows something about what happened.
+&quot;What do you remember?&quot;
 
-[[Ask her]]
-[[Stay quiet]]</tw-passagedata><tw-passagedata pid="15" name="Try to forget" tags="" position="975,1150" size="100,100">You and Maia walk in silence. Your footsteps echo through the metallic halls as the two of you traverse the abandoned facility.
+Your head aches.
 
-The image of Lavos&#39; mutilated corpse flashes back into your mind constantly, and you grow desperate to focus on something else. The prosaic scenery of the facility offers little in the way of distraction, however, leaving you to struggle against your own rogue thoughts.
+[[Try to remember]]
+[[Try to forget]]</tw-passagedata><tw-passagedata pid="11" name="Try to remember" tags="medbay" position="725,1350" size="100,100">You search your memory.
 
-You glance toward Maia at your side. You don&#39;t know her very well and you&#39;ve barely ever talked to her. She seems nervous - a little paranoid even. Her fidgeting makes it obvious. Perhaps some awkward conversation is what you both need right now.
+You see Lavos walking beside you. You see him struggling to open a hatch door. Your hand reaches for his shoulder. You pull him aside and try the door yourself.
 
-[[Ask if she&#39;s okay]]
-[[Stay quiet]]</tw-passagedata><tw-passagedata pid="16" name="Ask her" tags="" position="750,1275" size="100,100">&quot;Maia...? What exactly did you see?&quot; you ask carefully.
+Blood splatters on your face. The taste of iron coats your tongue.
 
-She seems to tense slightly at the question, and takes a deep breath before answering. She doesn&#39;t look at you, keeping her eyes forward.
+&quot;Lavos died...&quot; you respond.
 
-&quot;I don&#39;t really know, if I&#39;m going to be honest...&quot; she says with an awkward chuckle. &quot;I heard some noises near where you and Lavos were. And when I went to check what was going on...&quot; She goes silent for a moment, staring at nothing in particular. &quot;...I&#39;m not sure what I saw... But I know it wasn&#39;t human. And before I could even comprehend what I was looking at... I ran.&quot;
+&quot;So, you do remember.&quot;
 
-[[&quot;You left us?&quot;]]
-[[&quot;It must have been horrible&quot;]]</tw-passagedata><tw-passagedata pid="17" name="Stay quiet" tags="" position="900,1275" size="100,100">You decide against speaking to Maia. It&#39;s not like you even know what to say. And you suspect a conversation with you could just make her mood worse than before.
+&quot;Not much.&quot;
 
-You look to the front again, focusing on putting one foot in front of the other as you walk. But no amount of concentration can stop Lavos&#39; deathly gaze from escaping your memory and piercing your soul. 
+The muscles of her defined arms twitch slightly.
 
-That cold chill remains for the entire walk, before finally being chased away by Maia&#39;s voice. &quot;That&#39;s the med bay over there.&quot;
+&quot;How did he die?&quot;
 
-You jump slightly at the sound and look back at her. She&#39;s pointing past you toward a door on your left. She must have noticed your startle, because she offers you a small, understanding smile - something you don&#39;t expect at all from the Redshift crew.
+[[&quot;I don&#39;t know&quot;|Don&#39;t know - 1]]
+[[&quot;Something killed him&quot;]]
 
-&quot;Red will probably be sent this way soon. Just rest up in there until she arrives. I&#39;ll be heading back now.&quot; With that, she turns to walk away. You consider thanking her, but decide against it, your mind still in the state that it is.
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="12" name="Try to forget" tags="medbay" position="875,1350" size="100,100">You see Lavos&#39; face again and pull away from the memory immediately. If you look for it, it might not leave you alone.
 
-Instead, you step toward the door.
+You shake your head. You can&#39;t meet her eyes.
+
+She&#39;s silent for a moment. The muscles of her defined arms twitch slightly.
+
+&quot;How did Lavos&#39; die, Scraprat?&quot;
+
+[[&quot;I don&#39;t know&quot;|Don&#39;t know - 1]]
+[[&quot;Something killed him&quot;]]
+
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="13" name="Don&#39;t know - 1" tags="medbay" position="725,1475" size="100,100">&quot;I don&#39;t know.&quot;
+
+Comet sighs.
+
+&quot;Maia said she saw some sort of creature. Did you?&quot;
+
+[[&quot;I don&#39;t know&quot;|Don&#39;t know - 2]]
+[[&quot;I think so&quot;]]
+
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="14" name="&quot;Something killed him&quot;" tags="medbay" position="875,1475" size="100,100">&quot;Something killed him.&quot; 
+The words come easier than you thought they would.
+
+&quot;Maia thinks the same thing. Said she saw a creature. Did you?&quot;
+
+[[&quot;I think so&quot;]]
+[[&quot;I can&#39;t remember&quot;]]
+
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="15" name="Don&#39;t know - 2" tags="medbay" position="650,1600" size="100,100">&quot;I don&#39;t know.&quot;
+
+&quot;For fuck&#39;s sake, rat!&quot; 
+
+Comet kicks the bed.
+
+&quot;One of us is a pile of meat right now. I need something from you!&quot;
+
+You know. But you can&#39;t.
+
+She sighs again. Heavier this time.
+
+&quot;Fine. Guess you can&#39;t give me shit.&quot;
+
+She looks to Red, then back at you.
+
+&quot;Afraid you can&#39;t rest too long. We still have a job to do.&quot;
+
+[[&quot;Even after what happened?&quot;]]
+[[&quot;I know&quot;]]
+
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="16" name="&quot;I think so&quot;" tags="medbay" position="800,1600" size="100,100">&quot;I think so...&quot; Nothing else could do such a thing.
+
+She thinks.
+
+&quot;That&#39;s not much to go by. But I suppose its enough to know we should be cautious.&quot;
+
+She looks to Red, then back at you.
+
+&quot;Afraid you can&#39;t rest too long. We still have a job to do.&quot;
+
+[[&quot;Even after what happened?&quot;]]
+[[&quot;I know&quot;]]</tw-passagedata><tw-passagedata pid="17" name="&quot;I can&#39;t remember&quot;" tags="medbay" position="950,1600" size="100,100">&quot;I can&#39;t really remember.&quot; But you know.
+
+Comet sighs softly and thinks.
+
+&quot;I suppose I can&#39;t ask for too much from you in this state.&quot;
+
+She looks to Red, then back at you.
+
+&quot;Afraid you can&#39;t rest too long. We still have a job to do.&quot;
+
+[[&quot;Even after what happened?&quot;]]
+[[&quot;I know&quot;]]</tw-passagedata><tw-passagedata pid="18" name="Head to the lobby" tags="lobby" position="1525,900" size="100,100">Comet stands before all of you. Kayne is beside her. No one must forget his authority.
+
+&quot;I&#39;m sure you all have figured out what happened by now, so I&#39;ll cut to the chase.&quot; 
+
+Silence. 
+
+Comet shifts her weight. &quot;Lavos has died. We don&#39;t know how.&quot; She seems calm.
+
+*She isn&#39;t*
+
+&quot;What do you mean we don&#39;t know?&quot; Eyes turn to Mac. &quot;Surely someone saw something.&quot;
+
+A small hand raises above the group. &quot;I did...&quot; Maia says hesitantly. &quot;I... I saw a monster.&quot;
+
+&quot;Bullshit!&quot; Victor&#39;s voice.
+
+&quot;It&#39;s true! It had claws and-&quot;
+
+&quot;We&#39;re not turning fucking grey-eyes now! One of us died, and I only saw one person covered in blood!&quot;
+
+He points to you. The others look.
+
+[[&quot;You think I did it?&quot;]]
+[[Stay quiet]]</tw-passagedata><tw-passagedata pid="19" name="&quot;You think I did it?&quot;" tags="lobby" position="1450,1025" size="100,100">The accusation angers you. &quot;You think I did it?&quot;
+
+He steps closer. His muscles are flexed.
+
+&quot;Wouldn&#39;t put it above you, scrap fucker.&quot;
+
+*He&#39;s dead*
+
+&quot;Victor, could you shut the fuck up for once in you goddamn life!&quot; Both of you look to Comet.
+
+&quot;You saw the shape he was in. Besides, did it look like something he could have possibly done?&quot;
+
+Victor snorts and steps away. Eyes leave you.
+
+She sighs heavily. &quot;For now, we&#39;ll go by the assumption that there&#39;s something in this facility with us, alright? I&#39;m not asking you to start believing in greys, I&#39;m asking you to be cautious. Got it?&quot;
+
+No one objects.
+
+Kayne steps forward. His expression is stern. &quot;Good. Then let&#39;s continue.&quot;
+
+[[Mac]]
+[[Maia]]
+[[Kayne]]
+[[Red]]
+[[Comet]]
+[[Victor]]
+
+(set: $Mac to false)(set: $Maia to false)(set: $Kayne to false)(set: $Red to false)(set: $Comet to false)(set: $Victor to false)(set: $count to 0)</tw-passagedata><tw-passagedata pid="20" name="Stay quiet" tags="lobby" position="1600,1025" size="100,100">There is nothing you can say. The eyes grow concerned.
+
+&quot;He doesn&#39;t even deny it!&quot; Victor steps closer to you. &quot;Why is this scrap fucker still alive right now!?&quot;
+
+*He&#39;s dead*
+
+&quot;Victor, could you shut the fuck up for once in you goddamn life!&quot; Both of you look to Comet.
+
+&quot;You saw the shape he was in. Besides, did it look like something he could have possibly done?&quot;
+
+Victor snorts and steps away. Eyes leave you.
+
+She sighs heavily. &quot;For now, we&#39;ll go by the assumption that there&#39;s something in this facility with us, alright? I&#39;m not asking you to start believing in greys, I&#39;m asking you to be cautious. Got it?&quot;
+
+No one objects.
+
+Kayne steps forward. His expression is stern. &quot;Good. Then let&#39;s continue.&quot;
+
+[[Mac]]
+[[Maia]]
+[[Kayne]]
+[[Red]]
+[[Comet]]
+[[Victor]]
+
+(set: $trust to it -1)
+(set: $count to 0)</tw-passagedata><tw-passagedata pid="21" name="Mac" tags="lobby" position="1375,1175" size="100,100">(if: $count is 0)[&quot;No one can move alone. We&#39;ll work in groups of two...&quot; Kayne starts. Your eyes move to Mac.](if: $count is 1)[&quot;Comet will stick with Red at the green zone...&quot; You glance at Mac.](if: $count is 2)[&quot;I&#39;m sure Lavos&#39; death don&#39;t sit well with most of you, but don&#39;t forget why we&#39;re here...&quot; Your focus drifts to Mac.]
+
+He&#39;s young. And a little shit. 
+
+But he&#39;s smart. If it weren&#39;t for him, this planet wouldn&#39;t have been found.
+
+Perhaps it shouldn&#39;t have. There&#39;s a reason it was hidden.
+
+(if: $count is 0)[&quot;Victor, you&#39;re with Mac on C-Sector. I&#39;ll be joining you...&quot;](if: $count is 1)[&quot;Maia and Scraprat, I want you in F...&quot;](if: $count is 2)[&quot;Find pasta, keep comms open, and don&#39;t dare fucking die. Ain&#39;t good for the heart. Now get moving.&quot;]
+
+
+(if: $count is 2)[[Get moving]]
+(else-if: $count &lt; 2)[
+	(if: $Maia is false)[ [[Maia]]
+    ](if: $Kayne is false)[ [[Kayne]]
+    ](if: $Red is false)[ [[Red]]
+    ](if: $Comet is false)[ [[Comet]]
+    ](if: $Victor is false)[[Victor]]
+]
+
+(set: $count to it +1)(set: $Mac to true)</tw-passagedata><tw-passagedata pid="22" name="Maia" tags="lobby" position="1375,1325" size="100,100">(if: $count is 0)[&quot;No one can move alone. We&#39;ll work in groups of two...&quot; Kayne starts. Your eyes move to Maia.](if: $count is 1)[&quot;Comet will stick with Red at the green zone...&quot; You glance at Maia.](if: $count is 2)[&quot;I&#39;m sure Lavos&#39; death don&#39;t sit well with most of you, but don&#39;t forget why we&#39;re here...&quot; Your focus drifts to Maia.]
+
+The only somewhat nice one. She probably just hates conflict, though.
+
+She&#39;s too pretty to be a dragger. Too frail.
+
+Too soft.
+
+You like her.
+
+(if: $count is 0)[&quot;Victor, you&#39;re with Mac on C-Sector. I&#39;ll be joining you...&quot;](if: $count is 1)[&quot;Maia and Scraprat, I want you in F...&quot;](if: $count is 2)[&quot;Find pasta, keep comms open, and don&#39;t dare fucking die. Ain&#39;t good for the heart. Now get moving.&quot;]
+
+(if: $count is 2)[[Get moving]]
+(else-if: $count &lt; 2)[
+	(if: $Mac is false)[ [[Mac]]
+    ](if: $Kayne is false)[ [[Kayne]]
+    ](if: $Red is false)[ [[Red]]
+    ](if: $Comet is false)[ [[Comet]]
+    ](if: $Victor is false)[[Victor]]
+]
+
+(set: $count to it +1)(set: $Maia to true)</tw-passagedata><tw-passagedata pid="23" name="Kayne" tags="lobby" position="1525,1175" size="100,100">(if: $count is 0)[&quot;No one can move alone. We&#39;ll work in groups of two...&quot; Kayne starts. Your eyes move to Kayne.](if: $count is 1)[&quot;Comet will stick with Red at the green zone in case of any more attacks...&quot; You glance at Kayne.](if: $count is 2)[&quot;I&#39;m sure Lavos&#39; death don&#39;t sit well with most of you, but don&#39;t forget why we&#39;re here...&quot; Your focus drifts to Kayne.]
+
+Technically the leader. Everyone prefers Comet.
+
+It was him who added you to the crew. Only because he saw a use in you, though.
+
+No one else would have willingly taken in an ex-Vox bot.
+
+(if: $count is 0)[&quot;Victor, you&#39;re with Mac on C-Sector. I&#39;ll be joining you...&quot;](if: $count is 1)[&quot;Maia and Scraprat, I want you in F...&quot;](if: $count is 2)[&quot;Find pasta, keep comms open, and don&#39;t dare fucking die. Ain&#39;t good for the heart. Now get moving.&quot;]
+
+
+(if: $count is 2)[[Get moving]]
+(else-if: $count &lt; 2)[
+    (if: $Mac is false)[ [[Mac]]
+	](if: $Maia is false)[ [[Maia]]
+	](if: $Red is false)[ [[Red]]
+    ](if: $Comet is false)[ [[Comet]]
+    ](if: $Victor is false)[[Victor]]
+]
+
+(set: $count to it +1)(set: $Kayne to true)</tw-passagedata><tw-passagedata pid="24" name="Red" tags="lobby" position="1525,1325" size="100,100">(if: $count is 0)[&quot;No one can move alone. We&#39;ll work in groups of two...&quot; Kayne starts. Your eyes move to Red.](if: $count is 1)[&quot;Comet will stick with Red at the green zone...&quot; You glance at Red.](if: $count is 2)[&quot;I&#39;m sure Lavos&#39; death don&#39;t sit well with most of you, but don&#39;t forget why we&#39;re here...&quot; Your focus drifts to Red.]
+
+Overqualified to be the Redshift&#39;s nurse.
+
+She always knows better. But she doesn&#39;t share unless asked.
+
+You don&#39;t know how she feels about you.
+
+Probably fuck all.
+
+(if: $count is 0)[&quot;Victor, you&#39;re with Mac on C-Sector. I&#39;ll be joining you...&quot;](if: $count is 1)[&quot;Maia and Scraprat, I want you in F...&quot;](if: $count is 2)[&quot;Find pasta, keep comms open, and don&#39;t dare fucking die. Ain&#39;t good for the heart. Now get moving.&quot;]
+
+(if: $count is 2)[[Get moving]]
+(else-if: $count &lt; 2)[
+    (if: $Mac is false)[ [[Mac]]
+	](if: $Maia is false)[ [[Maia]]
+    ](if: $Kayne is false)[ [[Kayne]]
+    ](if: $Comet is false)[ [[Comet]]
+    ](if: $Victor is false)[[Victor]]
+]
+
+(set: $count to it +1)(set: $Red to true)</tw-passagedata><tw-passagedata pid="25" name="Comet" tags="lobby" position="1675,1325" size="100,100">(if: $count is 0)[&quot;No one can move alone. We&#39;ll work in groups of two...&quot; Kayne starts. Your eyes move to Comet.](if: $count is 1)[&quot;Comet will stick with Red at the green zone...&quot; You glance at Comet.](if: $count is 2)[&quot;I&#39;m sure Lavos&#39; death don&#39;t sit well with most of you, but don&#39;t forget why we&#39;re here...&quot; Your focus drifts to Comet.]
+
+She&#39;s the pilot. But she should be the leader.
+
+Arms almost as strong as Victor. Ten times the wisdom, though.
+
+You tolerate each other. Most of the time.
+
+*She intrigues you*
+
+(if: $count is 0)[&quot;Victor, you&#39;re with Mac on C-Sector. I&#39;ll be joining you...&quot;](if: $count is 1)[&quot;Maia and Scraprat, I want you in F...&quot;](if: $count is 2)[&quot;Find pasta, keep comms open, and don&#39;t dare fucking die. Ain&#39;t good for the heart. Now get moving.&quot;]
+
+(if: $count is 2)[[Get moving]]
+(else-if: $count &lt; 2)[
+    (if: $Mac is false)[ [[Mac]]
+	](if: $Maia is false)[ [[Maia]]
+    ](if: $Kayne is false)[ [[Kayne]]
+    ](if: $Red is false)[ [[Red]]
+    ](if: $Victor is false)[[Victor]]
+]
+
+(set: $count to it +1)(set: $Comet to true)</tw-passagedata><tw-passagedata pid="26" name="Victor" tags="lobby" position="1675,1175" size="100,100">(if: $count is 0)[&quot;No one can move alone. We&#39;ll work in groups of two...&quot; Kayne starts. Your eyes move to Victor.](if: $count is 1)[&quot;Comet will stick with Red at the green zone...&quot; You glance at Victor.](if: $count is 2)[&quot;I&#39;m sure Lavos&#39; death don&#39;t sit well with most of you, but don&#39;t forget why we&#39;re here...&quot; Your focus drifts to Victor.]
+
+His hatred is always clear. Hatred to you.
+
+He acts tough. But Lavos was his best friend.
+
+Your blood could make him feel better.
+
+*He can&#39;t have it*
+
+(if: $count is 0)[&quot;Victor, you&#39;re with Mac on C-Sector. I&#39;ll be joining you...&quot;](if: $count is 1)[&quot;Maia and Scraprat, I want you in F...&quot;](if: $count is 2)[&quot;Find pasta, keep comms open, and don&#39;t dare fucking die. Ain&#39;t good for the heart. Now get moving.&quot;]
+
+(if: $count is 2)[[Get moving]]
+(else-if: $count &lt; 2)[
+    (if: $Mac is false)[ [[Mac]]
+	](if: $Maia is false)[ [[Maia]]
+    ](if: $Kayne is false)[ [[Kayne]]
+    ](if: $Red is false)[ [[Red]]
+    ](if: $Comet is false)[[Comet]]
+]
+
+(set: $count to it +1)(set: $Victor to true)</tw-passagedata><tw-passagedata pid="27" name="Get moving" tags="hallway" position="1525,1500" size="100,100">You and Maia head to the F-Sector. The two of you are alone.
+
+It feels better like this.
+
+Footsteps echo off the metallic walls. Hers are lighter.
+
+Not a word is said. But you can feel her looking at you.
+
+[[Stay silent|Stay silent1]]
+[[&quot;What is it?&quot;]]</tw-passagedata><tw-passagedata pid="28" name="Stay silent1" tags="hallway" position="1450,1625" size="100,100">If she wants to say something, she can bring it up herself. You stay silent.
+
+You don&#39;t spare her a glance.
+
+She&#39;s tense. Scared. You can feel it.
+
+*There&#39;s no comfort to be found here*
+
+[[Start scanning]]
+
+(set: $influence to it +1)</tw-passagedata><tw-passagedata pid="29" name="&quot;What is it?&quot;" tags="hallway" position="1600,1625" size="100,100">You glance back at her. &quot;What is it?&quot;
+
+She&#39;s surprised you said anything. She seems hesitant to respond.
+
+&quot;You just... look a little tense.&quot; She snorts at herself. &quot;I mean, of course you would be.&quot;
+
+Her eyes meet yours. Innocence. &quot;What happened to Lavos wasn&#39;t your fault. That&#39;s all I want to say.&quot;
+
+She&#39;s kind.
+
+[[&quot;Thanks&quot;]]
+[[&quot;Let&#39;s focus&quot;]]
+
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="30" name="&quot;Thanks&quot;" tags="hallway" position="1700,1750" size="100,100">&quot;Thanks...&quot; You think you&#39;re thankful.
+
+She nods. You spot a faint smile.
+
+She likes you.
+
+[[Start scanning]]
+
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="31" name="&quot;Let&#39;s focus&quot;" tags="hallway" position="1575,1750" size="100,100">&quot;Let&#39;s focus.&quot; Her words mean nothing.
+
+She folds back into herself. She nods.
+
+She was hoping for something else.
+
+[[Start scanning]]</tw-passagedata><tw-passagedata pid="32" name="Start scanning" tags="hallway" position="1525,1900" size="100,100">Green light reflects back to you as you scan the pieces of equipment.
+
+Beeping.
+
+0.000000000023 percent. &#39;Negligible Trace&#39;
+
+Negligible. Yet one of the highest numbers so far.
+
+Beeping.
+
+&quot;I&#39;m starting to think there isn&#39;t any here.&quot; Maia is looking down at her own scanner.
+
+[[&quot;There has to be&quot;]]
+[[Stay silent|Stay silent2]]</tw-passagedata><tw-passagedata pid="33" name="Stay silent2" tags="hallway" position="1450,2025" size="100,100">You don&#39;t respond.
+
+The reason is obvious.
+
+This isn&#39;t the right place. It&#39;s deeper.
+
+There&#39;s no use looking here.
+
+You feel her eyes again.
+
+&quot;Let&#39;s keep going.&quot;
+
+[[Move on]]
+
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="34" name="Move on" tags="hallway" position="1525,2150" size="100,100">You head to the next room. The metallic hallway greets you again.
+
+A sound.
+
+You turn to look. A disposal room.
+
+You look back at Maia. She&#39;s still walking.
+
+Is it worth checking?
+
+*Yes*
+
+[[Tell Maia]]
+[[Check without telling]]</tw-passagedata><tw-passagedata pid="35" name="Tell Maia" tags="hallway" position="1775,2050" size="100,100">&quot;I heard something from that room.&quot; Your voice is soft.
+
+She keeps walking. She didn&#39;t hear. No matter.
+
+You turn to the disposal room.
+
+[[Enter the room]]</tw-passagedata><tw-passagedata pid="36" name="Check without telling" tags="hallway" position="1900,2150" size="100,100">Maia keeps walking. You don&#39;t stop her.
+
+You turn to the disposal room.
+
+[[Enter the room]]
+
+(set: $influence to it +1)</tw-passagedata><tw-passagedata pid="37" name="Enter the room" tags="disposal" position="2100,700" size="100,100">The door opens. You enter.
+
+Bins, appliances, a shute, a stench. A rusty trolley. Nothing that could have made a sound.
+
+It&#39;s dark.
+
+[[Go deeper]]
+[[Leave|Leave1]]
+
+(set: $left to false)</tw-passagedata><tw-passagedata pid="38" name="Go deeper" tags="disposal" position="2150,825" size="100,100">You step further inside. The stench worsens.
+
+A sound. You turn around.
+
+Nothing.
+
+[[Investigate]]
+[[Leave|Leave2]]
+
+(if: $left is false)[(set: $influence to it +1)]
+(set: $left to false)</tw-passagedata><tw-passagedata pid="39" name="Leave1" tags="disposal" position="2300,825" size="100,100">You turn to leave.
+
+*No*
+
+[[Go deeper]]
+
+(set: $left to true)</tw-passagedata><tw-passagedata pid="40" name="Investigate" tags="disposal" position="2150,950" size="100,100">You move toward the bins. Slowly.
+
+You peer inside. Nothing.
+
+Movement.
+
+Your eyes snap to the shute. You can hear a pounding in your chest.
+
+[[Check]]
+[[Leave|Leave3]]
+
+(if: $left is false)[(set: $influence to it +1)]
+(set: $left to false)</tw-passagedata><tw-passagedata pid="41" name="Leave2" tags="disposal" position="2300,950" size="100,100">You head to the door.
+
+*No*
+
+[[Investigate]]
+
+(set: $left to true)</tw-passagedata><tw-passagedata pid="42" name="Check" tags="disposal" position="2150,1075" size="100,100">You approach the shute. Every dark corner draws your attention.
+
+But you see nothing. The shute remains still.
+
+You sigh, and turn to leave.
+
+[[Leave]]
+
+(if: $left is false)[(set: $influence to it +1)]</tw-passagedata><tw-passagedata pid="43" name="Leave3" tags="disposal" position="2300,1075" size="100,100">You want to get out.
+
+*No*
+
+[[Check]]
+
+(set: $left to true)</tw-passagedata><tw-passagedata pid="44" name="Leave" tags="disposal" position="2225,1200" size="100,100">You&#39;re shoved back against the wall and a hand reaches to grip your throat.
+
+It doesn&#39;t choke you. It threatens you.
+
+Victor&#39;s enraged face greets you from the dark.
+
+He&#39;s breathless. He&#39;s in pain.
+
+*He&#39;ll kill you*
+
+&quot;You&#39;re going to tell me exactly what happened to Lavos, or I swear to whatever fantasy you believe in, you&#39;ll be the next piece of garbage flying down that shute...&quot;
+
+He&#39;s not lying.
+
+[[&quot;I don&#39;t remember!&quot;]]
+[[&quot;Let me go!]]</tw-passagedata><tw-passagedata pid="45" name="&quot;Let me go!" tags="disposal" position="2300,1325" size="100,100">&quot;Let go of me!&quot; You struggle against his grip. It tightens
+
+&quot;Like hell I will! You&#39;re not running off until you tell me what I want to hear!&quot;
+
+*He&#39;s going to kill you*
+
+&quot;You were the only one with him! The others may buy your act, but I sure as hell won&#39;t...&quot;
+
+He can&#39;t hold back much longer.
+
+[[Reason|Reason1]]
+[[Struggle|Struggle1]]
+
+(set: $reason to 0)(set: $struggle to 0)</tw-passagedata><tw-passagedata pid="46" name="&quot;I don&#39;t remember!&quot;" tags="disposal" position="2150,1325" size="100,100">&quot;I don&#39;t remember!&quot; You struggle against his grip. It tightens.
+
+You&#39;re pulled off the wall and slammed back into it. Your breath is gone.
+
+&quot;DON&#39;T FUCK WITH ME!&quot;
+
+*He&#39;ll kill you*
+
+&quot;You were the only one with him! The others may buy your act, but I sure as hell won&#39;t...&quot;
+
+He can&#39;t hold back much longer.
+
+[[Reason|Reason1]]
+[[Struggle|Struggle1]]
+
+(set: $reason to 0)(set: $struggle to 0)</tw-passagedata><tw-passagedata pid="47" name="Reason1" tags="disposal" position="2150,1450" size="100,100">&quot;I was wounded as well! Lavos couldn&#39;t have done that.&quot;
+
+*It&#39;s no use*
+
+&quot;Shut the fuck up! If I hear you blaming a fucking grey, I swear to God...&quot;
+
+His hand tightens around your throat. It hurts.
+
+[[Reason|Reason2]]
+[[Struggle|Struggle2]]
+
+(set: $reason to it +1)</tw-passagedata><tw-passagedata pid="48" name="Struggle1" tags="disposal" position="2300,1450" size="100,100">You struggle more. You try to pry his hand off your neck. He won&#39;t let you.
+
+&quot;Get off!&quot;
+
+*Pathetic*
+
+&quot;Stop struggling, or I&#39;ll break this frail neck of yours. Now answer my goddamn question!&quot;
+
+His hand tightens around your throat. It hurts.
+
+[[Reason|Reason2]]
+[[Struggle|Struggle2]]
+
+(set: $struggle to it +1)</tw-passagedata><tw-passagedata pid="49" name="Reason2" tags="disposal" position="2150,1575" size="100,100">&quot;How could I have done that to him!? No human-&quot;
+
+(if: $reason is 1)[&quot;I said SHUT THE FUCK UP!&quot;](else-if: $reason is 0)[&quot;Blaming fucking greys now!?&quot;]
+
+He throws you to the ground. You roll into the bins and hit your head.
+
+*He&#39;s dead*
+
+Victor approaches again. His knuckles are white.
+
+[[Get away]]
+[[Tackle him]]
+
+(set: $reason to it +1)</tw-passagedata><tw-passagedata pid="50" name="Struggle2" tags="disposal" position="2300,1575" size="100,100">You struggle as much as you can. You use all your strength to break free from his grip.
+
+(if: $struggle is 1)[&quot;I said STOP STRUGGLING!&quot;](else-if: $struggle is 0)[&quot;You&#39;re not getting away from me, you bastard!&quot;]
+
+He throws you to the ground. You roll into the bins and hit your hit.
+
+*He&#39;s dead*
+
+Victor approaches again. His knuckles are white.
+
+[[Get away]]
+[[Tackle him]]
+
+(set: $struggle to it +1)</tw-passagedata><tw-passagedata pid="51" name="Get away" tags="disposal" position="2300,1700" size="100,100">You push against the ground to crawl away from him, failing to get on your feet.
+
+*Pointless*
+
+&quot;Crawl like the rat you are, motherfucker.&quot;
+
+He reaches you and kicks you in the ribs. Then the stomach.
+
+Your body aches.
+
+[[Fight back]]
+[[Escape]]</tw-passagedata><tw-passagedata pid="52" name="Tackle him" tags="disposal" position="2150,1700" size="100,100">You jump off the ground toward him, grabbing his waist for a tackle.
+
+*Not enough*
+
+He slams his fists into your back and shoves you against the wall. You fall to the ground.
+
+Your body aches.
+
+&quot;I&#39;m stronger than Lavos, rat.&quot;
+
+[[Fight back]]
+[[Escape]]</tw-passagedata><tw-passagedata pid="53" name="Fight back" tags="disposal" position="2150,1825" size="100,100">You grab his leg and try to wrestle him down.
+
+*Weak*
+
+&quot;That all? Lavos died to this!?&quot;
+
+Victor wrenches you off and throws you again. You crash hard against the rusty trolley. Its leg snaps loose.
+
+Victor approaches still.
+
+*He&#39;s going to kill you*
+
+[[HELP ME]]</tw-passagedata><tw-passagedata pid="54" name="Escape" tags="disposal" position="2300,1825" size="100,100">You shove his leg away and jump up to run for the door.
+
+*Weak*
+
+&quot;Fucking coward. Lavos died to this!?&quot;
+
+Victor catches you by the arm and throws you again. You crash hard against the rusty trolley. Its leg snaps loose.
+
+Victor approaches still.
+
+*He&#39;s going to kill you*
+
+[[HELP ME]]</tw-passagedata><tw-passagedata pid="55" name="HELP ME" tags="disposal" position="2225,1950" size="100,100">Your body is too sore to move. You can&#39;t do anything. 
+
+Victor steps closer.
+
+Your hands tremble. They&#39;re useless. 
+
+He reaches for you. 
+
+You&#39;re going to die.
+
+
+
+
+*You rip off the loose trolley leg and swing it at his face.
+
+Blood splatters across the floor. He joins it there.
+
+He touches at his cheek and struggles to his feet.
+
+He says something.*
+
+[[Hit him again|Hit him1]]
+[[Let him go]]
+
+(set: $stop to false)</tw-passagedata><tw-passagedata pid="56" name="Hit him1" tags="gore" position="2150,2075" size="100,100">*You raise the rusty leg above your head and bring it down onto his skull
+
+You hear a crack in the impact
+
+You think he&#39;s standing up*
+
+[[Hit him again|Hit him2]]
+[[Stop]]</tw-passagedata><tw-passagedata pid="57" name="Let him go" tags="gore" position="2300,2075" size="100,100">*You raise the rusty leg above your head and bring it down onto his skull
+
+You hear a crack in the impact
+
+You think he&#39;s standing up*
+
+[[Hit him again|Hit him2]]
+[[Stop]]
+
+(set: $stop to true)</tw-passagedata><tw-passagedata pid="58" name="Hit him2" tags="gore" position="2150,2200" size="100,100">*You swing it again
+
+More blood splatters on the ground
+
+Victor isn&#39;t moving*
+
+[[Hit him again|Hit him3]]
+(if: $stop is true)[ [[Resist]]](else:)[ [[Resist|Hit him3]]]
+
+(set: $influence to it +2)</tw-passagedata><tw-passagedata pid="59" name="Stop" tags="gore" position="2300,2200" size="100,100">*You swing it again
+
+More blood splatters on the ground
+
+Victor isn&#39;t moving*
+
+[[Resist]]
+(if: $stop is false)[[Hit him again|Hit him3]]
+
+(set: $stop to true)</tw-passagedata><tw-passagedata pid="60" name="Resist" tags="disposal" position="2300,2325" size="100,100">You&#39;re about to swing the leg again but let go of it before you can. It clatters to the ground.
+
+You stumble back.
+
+Victor isn&#39;t moving.
+
+What have you done...
+
+[[See if he&#39;s breathing]]
+[[Get out]]
+
+(set: $VictorDeath to false)</tw-passagedata><tw-passagedata pid="61" name="Hit him3" tags="victor" position="2150,2325" size="100,100">*Blood hits your cheek as you swing the leg again
+
+Victor doesn&#39;t make a sound
+
+You hit him again
+
+His face is unrecognizable
+
+You hit him again
+
+Your arms are tired
+
+You hit him again
+
+There&#39;s nothing left
+
+You swing again*
+
+The trolley leg clatters to the ground as your grip gives out. You stumble backwards. Air fills your lungs again.
+
+You see it.
+
+Victor&#39;s head is a puddle of gore.
+
+What have you done...
+
+[[Get out]]
+[[Look at it]]
+
+(set: $influence to it +2)</tw-passagedata><tw-passagedata pid="62" name="See if he&#39;s breathing" tags="disposal" position="2375,2450" size="100,100">You rush to his side and listen carefully near his mouth.
+
+It&#39;s faint.
+
+But it&#39;s there.
+
+Blood pours from his head. But he&#39;s alive.
+
+*Should he be?*
+
+[[Get out]]
+[[Take him to the med bay]]</tw-passagedata><tw-passagedata pid="63" name="Get out" tags="hallway" position="2075,2600" size="100,100">You exit the room as quickly as you can.
+
+Your hands still tremble.
+
+*(if: $VictorDeath is true)[You just killed Victor](else:)[You left Victor bleeding]*
+
+&quot;Scraprat?&quot;
+
+Maia&#39;s voice. She&#39;s close.
+
+(if: $VictorDeath is true)[You wipe the blood from your cheek and take a deep breath. You try to compose yourself.](else:)[You check for blood. There isn&#39;t any. You take a deep breath to compose yourself.]
+
+Maia appears from around the corner.
+
+Relief shines in her face. Then concern.
+
+&quot;There you are. Thought an alien got you.&quot;
+
+She comes closer.
+
+&quot;You okay?&quot;
+
+[[&quot;Of course&quot;]]
+[[&quot;Let&#39;s get going&quot;]]
+
+(set: $VictorDeath to true)</tw-passagedata><tw-passagedata pid="64" name="Look at it" tags="victor" position="2075,2450" size="100,100">You&#39;re disgusted. But you can&#39;t look away.
+
+You won&#39;t.
+
+Once a strong man. Now just a pile.
+
+Same as Lavos.
+
+*He got what was coming to him*
+
+[[Get out]]
+
+(set: $influence to it +1)</tw-passagedata><tw-passagedata pid="65" name="Take him to the med bay" tags="hallway" position="2800,1100" size="100,100">You scoop Victor up into your arms. He&#39;s heavy.
+
+*You&#39;re weak*
+
+You exit the room. Your heart still races.
+
+&quot;Scraprat?&quot;
+
+Maia&#39;s voice. She&#39;s close.
+
+You take a deep breath.
+
+She appears around the corner. Relief shines on her face. But it quickly turns to shock.
+
+&quot;Is that... Is that Victor...?&quot;
+
+&quot;He&#39;s hurt. I need to get him to Red. Quick&quot;
+
+Maia doesn&#39;t respond. She just stares.
+
+&quot;Maia.&quot;
+
+&quot;Right. Right. Let&#39;s go quickly, then.&quot;
+
+[[Go to Red]]</tw-passagedata><tw-passagedata pid="66" name="&quot;Of course&quot;" tags="hallway" position="2375,2600" size="100,100">&quot;Of course. I just found some things worth scanning. But it was nothing.&quot;
+
+*You lied to her.*
+
+&quot;Why&#39;d you say it like that?&quot;
+
+&quot;Like what?&quot;
+
+A moment. She shakes her head. &quot;Nevermind. We better keep going, then.&quot;
+
+You nod.
+
+She just seems curious.
+
+*(if: $VictorDeath is true)[You killed Victor](else:)[You left Victor]*
+
+[[Follow her]]
+
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="67" name="&quot;Let&#39;s get going&quot;" tags="hallway" position="2375,2725" size="100,100">&quot;Let&#39;s get going. We have work to do.&quot;
+
+You start walking.
+
+Silence. Then footsteps.
+
+She walks by your side.
+
+&quot;Right... This way, then.&quot;
+
+*(if: $VictorDeath is true)[You killed Victor](else:)[You left Victor]*
+
+[[Follow her]]
+
+(set: $trust to it -2)</tw-passagedata><tw-passagedata pid="68" name="Follow her" tags="hallway" position="2925,2100" size="100,100">You walk with her again.
+
+Does she sus[ect something?
+
+No.
+
+She was just worried.
+
+*(if: $VictorDeath is true)[You killed him](else:)[You left him]*
+
+&quot;Uhm... Scraprat?&quot;
+
+&quot;Yes?&quot;
+
+&quot;You&#39;re staring at me.&quot;
+
+You were?
+
+&quot;Oh, sorry. Didn&#39;t mean to.&quot;
+
+&quot;It&#39;s okay...&quot;
+
+She&#39;s nervous.
+
+[[Keep scanning]]</tw-passagedata><tw-passagedata pid="69" name="Keep scanning" tags="hallway" position="2925,2225" size="100,100">Beeping.
+
+&#39;Negligible Trace&#39;
+
+*(if: $VictorDeath is true)[You killed](else:)[You left]*
+
+&quot;Find anything?&quot;
+
+You shake your head.
+
+&quot;Strange that it&#39;s basically everywhere, but it&#39;s all completely useless. Kind of like the ocean on Earth used to be.&quot;
+
+You nod.
+
+*(if: $VictorDeath is true)[He&#39;s dead](else:)[He&#39;ll die]*
+
+[[Scan]]</tw-passagedata><tw-passagedata pid="70" name="Scan" tags="hallway" position="2925,2350" size="100,100">&#39;Negligible&#39;
+
+&quot;Think the others have found something?&quot;
+
+&#39;Negligible&#39;
+
+&quot;Maybe.&quot;
+
+&#39;Negligible&#39;
+
+&quot;Well, I hope so.&quot;
+
+&#39;Negligible&#39;
+
+&quot;Yeah...&quot;
+
+[[&#39;Negligible&#39;]]</tw-passagedata><tw-passagedata pid="71" name="&#39;Negligible&#39;" tags="hallway" position="2925,2475" size="100,100">A hand rests on your own. It lowers your scanner.
+
+You meet Maia&#39;s eyes.
+
+&quot;Scraprat. You&#39;ve been scanning the same crate for the past minute.&quot;
+
+Her voice is calm.
+
+&quot;Oh. I didn&#39;t realize.&quot;
+
+She chuckles. 
+
+&quot;Maybe we should take a break. You&#39;re tired.&quot;
+
+&quot;Yeah... I am.&quot;
+
+Static. &quot;Maia, Scraprat.&quot;
+
+Maia jumps slightly. Her hand rushes off of your own and reaches for her comm piece.
+
+&quot;Comet, that you?&quot;
+
+Static. &quot;Yes. Mac&#39;s group found something. We&#39;re all heading to C-Sector storage.&quot;
+
+Maia glances at you for a moment.
+
+&quot;I see. We&#39;ll head there now.&quot;
+
+Static. &quot;See you there.&quot;
+
+Silence.
+
+[[&quot;Let&#39;s go&quot;]]
+[[&quot;Our break will have to wait&quot;]]</tw-passagedata><tw-passagedata pid="72" name="&quot;Let&#39;s go&quot;" tags="hallway" position="2850,2600" size="100,100">&quot;Let&#39;s go.&quot;
+
+You put your scanner away.
+
+Maia nods slowly.
+
+You head for the door.
+
+You hear her following.
+
+[[Go to Mac]]</tw-passagedata><tw-passagedata pid="73" name="&quot;Our break will have to wait&quot;" tags="hallway" position="3000,2600" size="100,100">&quot;It seems our break will have to wait.&quot;
+
+&quot;Yeah, sorry.&quot;
+
+She seems dissapointed.
+
+&quot;We&#39;ll have a chance soon.&quot;
+
+&quot;I hope so.&quot;
+
+You both head to the door.
+
+[[Go to Mac]]
+
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="74" name="Go to Mac" tags="storage" position="3900,1050" size="100,100">&quot;The fuck is that?&quot;
+
+You don&#39;t know what you expected.
+
+&quot;How should I know?&quot;
+
+But it wasn&#39;t this.
+
+&quot;Where did it come from?&quot;
+
+&quot;Out of fucking no where.&quot;
+
+Some sort of creature lies dead on the ground. It seems like a grotesque combination of scorpion and spider. The size of a dog.
+
+&quot;You shot it?&quot; Comet gestures to Kayne&#39;s pistol.
+
+&quot;Yup. Damn thing almost got Mac before I could, though.&quot;
+
+[[Take a closer look]]
+[[See where it came from]]</tw-passagedata><tw-passagedata pid="75" name="Go to Red" tags="hallway" position="2800,1225" size="100,100">You and Maia rush to get to the green zone.
+
+She&#39;s still shocked. But she&#39;s keeping it in.
+
+&quot;That&#39;s the med bay over there.&quot;
+
+You approach it. 
+
+Maia waves her hand. It opens.
 
 [[Enter the med bay]]
 
-(set: $influence to it +1)</tw-passagedata><tw-passagedata pid="18" name="Ask if she&#39;s okay" tags="" position="1050,1275" size="100,100">&quot;Maia... You okay?&quot; you ask carefully, trying to seem more sympathetic than you usually do.
+</tw-passagedata><tw-passagedata pid="76" name="Enter the med bay" tags="medbay" position="2800,1350" size="100,100">Comet quickly steps away from Red and looks over at you.
 
-Maia seems to jump a little at your words before meeting your eyes. She immediately looks to the front again, rubbing her arm nervously. &quot;Well... I guess I&#39;m doing better than you,&quot; she responds with an attempt at a chuckle.
+&quot;Scrap- Is that Victor?&quot;
 
-She sighs softly and shakes her head. &quot;I just... I can&#39;t help but wonder if there was something I could have done, you know? If I had tried... maybe Lavos wouldn&#39;t be...&quot; She bites her lip to stop herself from finishing her thought.
+&quot;He&#39;s hurt.&quot;
 
-[[&quot;It&#39;s not your fault&quot;]]
-[[&quot;Yeah, maybe you could have&quot;]]
+Red moves to one of the beds. &quot;Let me see him.&quot;
 
-(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="19" name="&quot;You left us?&quot;" tags="" position="675,1400" size="100,100">Hearing that she simply ran when you and Lavos were being attacked by some creature triggers you slightly. &quot;So, you left us?&quot;
+You bring Victor to the bed and lay him down. Red studies him for a moment, then rushes to a cupboard.
 
-Maia tenses again at your accusation, her eyes darting to the floor. She doesn&#39;t respond at first, seeming to suppress a well of emotions threatening to burst forth.
+&quot;That&#39;s some severe head trauma.&quot;
 
-&quot;I&#39;m sorry...&quot; is all she manages to say, with a soft and fragile voice.
+&quot;Yeah, I know.&quot;
 
-Before you can question her further, she gestures toward a door beside you. &quot;That&#39;s the med bay...&quot; Her voice remains fragile, as if she&#39;s close to tears. &quot;Red will probably arrive soon... You can just... wait for her in there.&quot;
+Comet steps over to the bed. She looks down at Victor, then up at you.
 
-With that, Maia turns to walk away, her steps slightly faster than before.
+&quot;You gonna tell us what happened, or what?&quot;
 
-[[Enter the med bay]]
+Maia steps closer, too.
 
-(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="20" name="&quot;It must have been horrible&quot;" tags="" position="825,1400" size="100,100">You can imagine how she felt. Afraid and powerless to do anything about it. You would probably have run away as well, you think to yourself. Better not to add another body to the pile. &quot;It must have been horrible...&quot;
+[[&quot;He attacked me&quot;]]
+[[&quot;It was an alien&quot;]]
 
-Maia glances at you, seeming slightly surprised by your response. She quickly looks in front of her again, and nods slowly. &quot;Not as horrible as it must have been for you. Or Lavos...&quot;
+(set: $decription to false)</tw-passagedata><tw-passagedata pid="77" name="&quot;He attacked me&quot;" tags="medbay" position="2675,1475" size="100,100">&quot;He attacked me while I was separated from Maia.&quot;
 
-Before you can question her further, she gestures toward a door beside you. &quot;That&#39;s the med bay we found. Comet will probably be sending Red this way soon. Just rest up in there for the time being.&quot; She hesitates for a moment before adding, &quot;Ignore Victor, okay? You know how close he and Lavos were... He&#39;s just... you know.&quot; She looks away from you, fidgeting with the fabric of her shirt. &quot;Think we all are...&quot;
+Everyone stays quiet for a moment. Red returns with supplies and start working on Victor.
 
-With a final small smile, she turns to walk away, leaving you alone with your thoughts.
+Comet simply stares at you. &quot;He attacked you...?&quot;
 
-[[Enter the med bay]]
+&quot;And I defended myself.&quot;
 
-(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="21" name="Enter the med bay" tags="" position="900,1600" size="100,100">The door slides open with an electric buzz and you walk into the room. White beds line the one wall while dozens of glass cupboards line the other, drugs and equipment contained within. You imagine it used to seem quite sanitary, but now it only looks dark and dusty. Vox med bays tend to not be too useful anyways, though. They&#39;re usually more for optics. You would know.
+&quot;And nearly killed him! I&#39;d be surprised if he can even talk after this!&quot;
 
-You walk past all the beds and cupboards and open another door to enter the restroom. You reach one of the basins and try opening a faucet. Luckily enough, clear water starts pouring out of it. You don&#39;t know how it works, but you&#39;re just glad that it does as you rinse off your bloody your face. You turn your head up to see yourself in the mirror. You look tired - almost a little sick. Wet hair mats your forehead and some blood still clings to the stubble on your chin.
+&quot;He was going to kill me.&quot;
 
-[[&quot;Why did we even come here...?&quot;]]
-[[&quot;This doesn&#39;t change our goal...&quot;]]</tw-passagedata><tw-passagedata pid="22" name="&quot;It&#39;s not your fault&quot;" tags="" position="975,1400" size="100,100">You can&#39;t help but feel a little bad for her. You&#39;re not entirely sure what she saw and if there was anything she possibly could have done. But you know that, whatever caused Lavos&#39; death, it was far from anyone&#39;s fault. &quot;You&#39;re not to blame for what happened, Maia.&quot;
+&quot;You really expect me to believe that?&quot;
 
-Your words don&#39;t seem to ease her as much as you thought they would. Her shoulders remain tense, and her teeth keep digging into the flesh of her lip as she tries to hold back her emotions. She doesn&#39;t respond, and the two of you walk in silence once again.
+&quot;I do,&quot; Red comments from the side.
 
-Just as your thoughts threaten to return to the sight of Lavos, Maia finally speaks again. &quot;That&#39;s the med bay over there.&quot; She is pointing past you to a door on your left. &quot;Red will probably be sent this way soon, so just rest up in there until she arrives.&quot; Before you can respond, Maia turns to leave you. A few steps away, however, she turns back to look over at you. &quot;Thanks, by the way. Hope Red can fix you up.&quot; 
+&quot;Red, really?&quot;
 
-With that, she turns back around and walks away.
+Red looks up at Comet. &quot;You saw how Victor acted toward Scraprat. Honestly, I half expected him to attack him in front of everyone.&quot;
 
-[[Enter the med bay]]
+Red looks back down at her work.
 
-(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="23" name="&quot;Yeah, maybe you could have&quot;" tags="" position="1125,1400" size="100,100">Not only did Lavos get killed, but you could have died as well. If Maia really saw the supposed &#39;monster&#39;, maybe she actually could have helped. &quot;Yeah, maybe you could have.&quot;
+Silence.
 
-Maia tenses up further at your words, gnawing at her lip nervously. She doesn&#39;t look at you. She doesn&#39;t respond. You feel a small pang of guilt, but your frustration over the situation quickly overwhelms it.
+[[Apologize]]
+[[Blame Victor]]</tw-passagedata><tw-passagedata pid="78" name="&quot;It was an alien&quot;" tags="medbay" position="3100,1100" size="100,100">&quot;It was a grey. Same one Maia saw, I think.&quot;
 
-You look in front of you as well, deciding not to continue the conversation. As much as she is to blame for what happened, there&#39;s no use complaining about it now. The two of you continue to walk in silence.
+Maia&#39;s eyes widen. Red returns with supplies and start working on Victor.
 
-Eventually, Maia speaks up again, her voice frail. &quot;That&#39;s the med bay... Just wait for Red in there.&quot; She gestures toward a door beside you. Before you can respond, she quickly turns and walks away, fidgeting with the fabric of her clothes. You consider saying something, but decide against it.
+Comet just stares at you. &quot;A grey...?&quot;
 
-[[Enter the med bay]]
+&quot;Yes.&quot;
 
-(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="24" name="&quot;This doesn&#39;t change our goal...&quot;" tags="" position="975,1725" size="100,100">You stare at yourself in the mirror and grip the counter tighter. &quot;This doesn&#39;t change our goal...&quot; you mutter to yourself. You joined these idiot scavengers for a reason and you&#39;re not going to let something as fickle as a dead crewmate deter you from what you&#39;re here for. You always knew this job was dangerous. The dirty ones always are. But if there&#39;s anything of worth on this planet, and you know there is, you&#39;re going to find it no matter what.
+She&#39;s quiet for a moment. &quot;You&#39;re sure?&quot;
 
-&quot;Nuclear pasta...&quot; you repeat to yourself. The pylon outside was all the proof you needed for what this facility was used for. No way you&#39;re going to let something so valuable slip away.
+&quot;Yeah.&quot;
 
-A sudden sharp pain shoots out from your chest to all corners of your body, interupting your thought. It forces a breathless groan from your throat as you clutch at your wound.
+She glances at Maia.
 
-[[Pull your jacket aside to check]]</tw-passagedata><tw-passagedata pid="25" name="&quot;Why did we even come here...?&quot;" tags="" position="825,1725" size="100,100">&quot;Why did we even come here...?&quot; you mutter to yourself. The stinging pain all over your body only serves to emphasize your frustration. The very fact that this place was hidden from scanners should have been enough of a hint to not come here. Even Vox wouldn&#39;t do something like that for no reason.
+Maia tenses. &quot;I... I didn&#39;t see anything this time...&quot;
 
-You sigh and look back down at your hands gripping the edge of the counter. &quot;Damn draggers...&quot; The ridiculous greed of scavengers never ceases to amaze you. Everything about this planet screamed that it wasn&#39;t worth coming. Yet the crew decided to investigate regardless. Always after some potential hekloads, no regard for their safety.
+Comet considers, then looks at Red.
 
-A sudden sharp pain shoots out from your chest to all corners of your body, interupting your thought. It forces a breathless groan from your throat as you clutch at your wound.
+Red notices. &quot;A blunt object hit Victor&#39;s head. Hard. Make with that what you want.&quot;
 
-[[Pull your jacket aside to check]]
+Comet looks at you again.
 
-(set: $influence to it +1)</tw-passagedata><tw-passagedata pid="26" name="Pull your jacket aside to check" tags="" position="900,1850" size="100,100">You pull your jacket aside to see the injury in the mirror. You take a moment to register it, but quickly realize that it&#39;s a burn wound. A bad one. A hole in your shirt reveals charred flesh underneath with a splotchy mixture of deep red and ashen-gray. Blisters dot the wound, some weeping after being broken.
+*She doesn&#39;t believe you.*
 
-Among all the cuts and bruises, a burn wound seems out of place. You rack your brain over what could have caused the injury, but only one thing comes to mind: Lavos&#39; photon pistol.
+[[&quot;I just saw it leave&quot;]]
+[[&quot;Maybe I&#39;m wrong&quot;]]
 
-[[It must have been an accident]]
-[[It doesn&#39;t matter]]</tw-passagedata><tw-passagedata pid="27" name="It must have been an accident" tags="" position="825,1975" size="100,100">You imagine that it must have been an accident. If something really attacked the two of you, there&#39;s no doubt he would have tried to blast it. Perhaps it attacked you first while Lavos shot at it. One of his shots must have hit you, but the rest hit the creature, making it change targets and attack Lavos.
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="79" name="Apologize" tags="medbay" position="2700,1800" size="100,100">&quot;I didn&#39;t mean to hurt him this badly. I did what I could to defend myself in the moment. I&#39;m sorry.&quot;
 
-The explanation makes sense in your head, but it looks bad out of context regardless. Victor is already suspicious of you, and now there&#39;s evidence of Lavos having shot you as well.
+Comet doesn&#39;t respond.
 
-[[Be honest]]
-[[Hide the wound]]</tw-passagedata><tw-passagedata pid="28" name="It doesn&#39;t matter" tags="" position="975,1975" size="100,100">It hardly matters, you think to yourself. You don&#39;t remember what happened and there&#39;s no use trying to come up with reasons. You&#39;re injured, Lavos is dead, and there was maybe something that attacked you. End of story. If Lavos had meant to shoot you...
+&quot;I believe Scraprat, for what it&#39;s worth,&quot; Maia chimes in.
 
-Well, then he probably got what was coming to him anyway.
+Comet simply sighs.
 
-Despite how you view it, the others might not view it the same way. Victor is already suspicious of you, and now there&#39;s evidence of Lavos having shot you as well. It doesn&#39;t look good, regardless of what actually happened.
+&quot;Whatever, I&#39;ll leave it at that for now. Just no more cracking skulls. We can&#39;t lose another one today.&quot;
 
-[[Be honest]]
-[[Hide the wound]]
+[[Nod]]
 
-(set: $influence to it +1)</tw-passagedata><tw-passagedata pid="29" name="Hide the wound" tags="" position="975,2100" size="100,100">No one in the Reddshift crew actually like you - they&#39;re simply tolerating you. At least most of them are. If you give any more reason for them to suspect you of something, they&#39;ll run out of reasons to care. Besides, God knows what Victor would do to you if he found this wound. Best to just keep it hidden for now. No reason to make the situation worse than it already is.
+(set: $trust to it +2)</tw-passagedata><tw-passagedata pid="80" name="Blame Victor" tags="medbay" position="2800,1600" size="100,100">&quot;He got what was coming to him. He nearly killed me for something I didn&#39;t do. He&#39;s lucky he got off with a whack to the head.&quot;
 
-You wash your face and hands as best you can and exit the restroom. The moment you enter the med bay again, you see a woman leaning against one of the beds. She&#39;s dressed in the same rugged brown uniform as everyone else, yet somehow manages to make it seem much more sophisticated than the rest. Long, maroon hair frames her face as she looks up from the tablet in her hands. 
+Comet&#39;s eyes widen. &quot;Jesus, Scraprat. Do you see the state he&#39;s in?&quot;
 
-&quot;Ah, there you are. Almost thought the alien came back to finish the job.&quot; Red says that with an utterly bored expression. It leaves you wondering if she&#39;s joking or not, as she always does.
+&quot;Yeah, I put him in it.&quot;
 
-[[&quot;That&#39;s not funny&quot;]]
-[[&quot;Just washed off my face&quot;]]
+&quot;That&#39;s not-&quot;
+ 
+ She sighs. Her hands are clenched.
+ 
+ &quot;Whatever. Just no more skull-cracking from now on, okay? We can&#39;t lose another one today.&quot;
+ 
+ [[Nod]]</tw-passagedata><tw-passagedata pid="81" name="Nod" tags="medbay" position="3125,1600" size="100,100">Red bandages Victor&#39;s head. &quot;He should be fine for now. But he would have bled out.&quot;
 
-(set: $truthful to false)</tw-passagedata><tw-passagedata pid="30" name="Be honest" tags="" position="825,2100" size="100,100">Hiding it and then being found out anyways would put more suspicion on you than telling the truth ever could. And the truth is that you don&#39;t fucking know. If Victor has a problem with that, he&#39;s just going to have to deal with it.
+&quot;Jesus...&quot;
 
-You wash your face and hands as best you can and exit the restroom. The moment you enter the med bay again, you see a woman leaning against one of the beds. She&#39;s dressed in the same rugged brown uniform as everyone else, yet somehow manages to make it seem much more sophisticated than the rest. Long, maroon hair frames her face as she looks up from the tablet in her hands. 
+Static. &quot;Comet? Comet, come in.&quot;
 
-&quot;Ah, there you are. Almost thought the alien came back to finish the job.&quot; Red says that with an utterly bored expression. It leaves you wondering if she&#39;s joking or not, as she always does.
+She reaches for her comm piece. &quot;Mac? I&#39;m a little busy.&quot;
 
-[[&quot;That&#39;s not funny&quot;]]
-[[&quot;Just washed off my face&quot;]]
+Static. &quot;We... uh... We found something. Think everyone should see it.&quot;
 
-(set: $truthful to true)</tw-passagedata><tw-passagedata pid="31" name="&quot;That&#39;s not funny&quot;" tags="" position="825,2225" size="100,100">&quot;That&#39;s not funny,&quot; you say, annoyed that she&#39;s making light of something that could have killed you.
+Comet seems annoyed.
 
-&quot;Who said it was?&quot; she responds with the same bored voice as she taps away at her tablet a couple more times before stowing it in its holster on her belt. She pushes off the bed and takes a couple of steps toward you. &quot;Was told you got beat up pretty bad.&quot; She crosses her arms and trails her eyes down your body as if assessing your condition. You feel somewhat exposed under her gaze.
+&quot;Can&#39;t you just tell me what it is?&quot;
 
-[[&quot;Pretty bad is an understatement&quot;]]
-[[&quot;I&#39;m surviving&quot;]]</tw-passagedata><tw-passagedata pid="32" name="&quot;Just washed off my face&quot;" tags="" position="975,2225" size="100,100">&quot;Just washed off my face,&quot; you say with a vague gesture. You never know how to interact with this woman.
+Static. &quot;It&#39;s difficult to- Just get over here. We&#39;re at C-Sector storage.&quot;
 
-&quot;Uh huh,&quot; she responds with the same bored voice as she taps away at her tablet a couple more times before stowing it in its holster on her belt. She pushes off the bed and takes a couple of steps toward you. &quot;Was told you got beat up pretty bad.&quot; She crosses her arms and trails her eyes down your body as if assessing your condition. You feel somewhat exposed under her gaze.
+She sighs again and puts away her comm piece.
 
-[[&quot;Pretty bad is an understatement&quot;]]
-[[&quot;I&#39;m surviving&quot;]]</tw-passagedata><tw-passagedata pid="33" name="&quot;Pretty bad is an understatement&quot;" tags="" position="825,2350" size="100,100">To look at all the wounds on your body and chalk it up to being &#39;pretty bad&#39; annoys you more than you would like to admit. &quot;That&#39;s a bit of an understatement.&quot;
+&quot;Red, you stay here with Victor. Maia, Scraprat... Well, you heard Mac. Let&#39;s go.&quot;
 
-&quot;Compared to Lavos it&#39;s not,&quot; she says smoothly. She steps a little closer and takes your arm in her hands, rolls up your sleeve to expose the cuts there, and tilts her head as she examines them. She&#39;s more gentle than you thought she would be. &quot;Strange...&quot; she mutters softly, turning your arm slightly to look at the cuts from a different angle.
+*He&#39;ll live*
 
-[[&quot;What&#39;s strange?&quot;]]
-[[Pull your arm away]]
+[[Go to Mac]]</tw-passagedata><tw-passagedata pid="82" name="&quot;I just saw it leave&quot;" tags="medbay" position="3325,950" size="100,100">&quot;I just saw something leave the room. I don&#39;t know exactly what happened.&quot;
 
-(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="34" name="&quot;I&#39;m surviving&quot;" tags="" position="975,2350" size="100,100">It feels wrong to complain too much about your wounds when you were the lucky one. &quot;I&#39;m surviving, at least.&quot;
+&quot;Right.&quot;
 
-&quot;Look at that, you&#39;re already doing better than my other patient,&quot; she says smoothly and steps a little closer to you. She takes your arm in her hands, rolls up your sleeve to expose the cuts there, and tilts her head as she examines them. She&#39;s more gentle than you thought she would be. &quot;Strange...&quot; she mutters softly, turning your arm slightly to look at the cuts from a different angle.
+She sighs.
 
-[[&quot;What&#39;s strange?&quot;]]
-[[Pull your arm away]]
+&quot;What did it look like?&quot;
 
-(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="35" name="&quot;What&#39;s strange?&quot;" tags="" position="750,2500" size="100,100">Her ominous words catch you a bit off guard. &quot;What&#39;s strange...?&quot; you ask carefully, allowing her to scan you.
+[[&quot;Big&quot;]]
+[[&quot;Small&quot;]]
 
-&quot;The cuts just look a little weird, that&#39;s all.&quot; She let&#39;s your arm fall back to your side and checks your other arm next. Her unperturbed demeanor annoys you a little.
+(set: $description to true)
+(set: $correct to true)
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="83" name="&quot;Maybe I&#39;m wrong&quot;" tags="medbay" position="3025,1300" size="100,100">&quot;Maybe I didn&#39;t see it correctly. I don&#39;t know. I just saw... something. And found Victor on the ground. My mind may have fabricated the rest.&quot;
 
-[[&quot;You don&#39;t seem worried&quot;]]
-[[&quot;What&#39;s weird about them?]]
+Comet considers. &quot;I guess you do have reason to be paranoid...&quot;
 
-(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="36" name="Pull your arm away" tags="" position="1050,2500" size="100,100">Being studied like some experiment doesn&#39;t sit right with you, and you pull your arm out of her gentle grip, taking a small step back. &quot;Don&#39;t just take my arm like that.&quot;
+She sighs.
 
-Red gives you a small frown and crosses her arms again. &quot;My apologies. Should I have warned you first? Or do you just not like being touched? I can ask Mac to do it instead if you would prefer a man.&quot; It&#39;s impossible to tell if she&#39;s being sarcastic or not.
+&quot;Victor&#39;s injury doesn&#39;t match what happened to Lavos. Or you. But we should be careful anyways. Did you see anything else I should know of?&quot;
 
-&quot;What? No, that&#39;s not...&quot; her words catch you off guard. You sigh and compose yourself again.
+You shake your head.
 
-[[&quot;What are you even checking for?&quot;]]
-[[&quot;Just get it over with&quot;]]
+She looks at you for a moment. &quot;Alright... Well, thanks for bringing Victor here. We can&#39;t afford to lose another one today.&quot;
 
-(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="37" name="&quot;You don&#39;t seem worried&quot;" tags="" position="675,2625" size="100,100">&quot;You don&#39;t seem too worried about what happened,&quot; you comment as she turns your arm over in her hands.
+[[Nod]]</tw-passagedata><tw-passagedata pid="84" name="&quot;Big&quot;" tags="medbay" position="3250,1075" size="100,100">&quot;It was big. Bigger than a person.&quot;
 
-&quot;Don&#39;t I?&quot; she asks boredly. She holds your arm in place with one hand while the other reaches for the tablet at her side. She brings it up to your wounds and a soft light shines down from the device to scan the cuts. A couple of seconds after, she lets your arm fall back down to your side and taps away at the tablet again.
+&quot;Kind of like what I saw,&quot; Maia comments.
 
-&quot;No, you don&#39;t,&quot; you say as she works. She stows the tablet again and gestures to your jacket.
+Comet still looks at you.
 
-&quot;Let me see the rest.&quot; She ignores your comment, simply focusing on her job.
+&quot;Alright. Anything else? Shape?&quot;
 
-(if: $truthful is true)[[Take off your jacket]]
-(if: $truthful is false)[[&quot;I&#39;m fine, okay?&quot;]]</tw-passagedata><tw-passagedata pid="38" name="&quot;What&#39;s weird about them?" tags="" position="825,2625" size="100,100">You don&#39;t like not knowing what&#39;s going on, and her answer does nothing to ease your concern. &quot;Well, what&#39;s weird about them?&quot;
+[[&quot;Like an insect&quot;]]
+[[&quot;Like an animal&quot;]]
 
-Red doesn&#39;t answer immediately. She holds your arm in place with one hand while the other reaches for the tablet at her side. She brings it up to your wounds and a soft light shines down from the device to scan the cuts. A couple of seconds after, she lets your arm fall back down to your side and taps away at the tablet again.
+(set: $correct to false)
+(set: $size to &quot;big&quot;)</tw-passagedata><tw-passagedata pid="85" name="&quot;Small&quot;" tags="medbay" position="3400,1075" size="100,100">&quot;It was small. Smaller than a human. But quick.&quot;
 
-&quot;The shape is off. Almost looks like...&quot; She shakes her head to interupt her thought. &quot;Whatever sliced you must just have been very jagged.&quot; She stows the tablet again and gestures to your jacket. &quot;Let me see the rest.&quot;
+&quot;Small...? The one I saw was pretty big...&quot; Maia comments.
 
-(if: $truthful is true)[[Take off your jacket]]
-(if: $truthful is false)[[&quot;I&#39;m fine, okay?&quot;]]</tw-passagedata><tw-passagedata pid="39" name="&quot;What are you even checking for?&quot;" tags="" position="1125,2625" size="100,100">&quot;What are you even checking for?&quot; you ask as if it&#39;s an accusation.
+Comet still looks at you.
 
-Red raises a curious eyebrow at you. &quot;How exactly did you think this would go? Did you expect me to hand you a little bottle of my magical brew and move on with my day?&quot;
+&quot;Alright. Anything else? Shape?&quot;
 
-Her words annoy you, but even you can&#39;t deny that your question was slightly silly. &quot;I guess not.&quot;
+[[&quot;Like an animal&quot;]]
+[[&quot;Like an insect&quot;]]
 
-&quot;So, are you going to let me assess your wounds now? Or should I leave it to your capable hands?&quot; she asks boredly, but you spot a faint smirk upon her lips.
+(set: $size to &quot;small&quot;)</tw-passagedata><tw-passagedata pid="86" name="&quot;Like an animal&quot;" tags="medbay" position="3250,1200" size="100,100">&quot;I didn&#39;t have a good view. But it looked like an animal. Hairy. Feral.&quot;
 
-[[&quot;You can treat me&quot;]]
-[[&quot;I&#39;ll treat myself&quot;]]</tw-passagedata><tw-passagedata pid="40" name="&quot;Just get it over with&quot;" tags="" position="975,2625" size="100,100">You were just caught off guard, but you know that it would be best if she can check on your wounds. &quot;Just get it over with,&quot; you say as you take a step closer to her again, allowing her to continue her check-up.
+&quot;Oh...&quot; Maia doesn&#39;t seem confident.
 
-Red nods and takes your arms again. After a moment, she let&#39;s your arm fall back to your side and checks your other arm next. She then holds it in place with one hand while the other reaches for the tablet at her side. She brings it up to your wounds and a soft light shines down from the device to scan the cuts. A couple of seconds after, she lets your arm fall back down to your side and taps away at the tablet again.
+Comet nods slowly, her eyes never leaving you. &quot;I see. Well, I guess we should keep an eye out then.&quot;
 
-&quot;That wasn&#39;t too bad, hm?&quot; She stows the tablet and gestures to your jacket. &quot;Let me see the rest.&quot;
+[[Nod]]
 
-(if: $truthful is true)[[Take off your jacket]]
-(if: $truthful is false)[[&quot;I&#39;m fine, okay?&quot;]]</tw-passagedata><tw-passagedata pid="41" name="Take off your jacket" tags="" position="700,2900" size="100,100">You take a small breath to prepare yourself before compliantly taking off your jacket. You let it drop to the ground and look at Red to see how she&#39;ll react to the burn wound.
+(set: $correct to false)
+(set: $shape to &quot;animal-like&quot;)</tw-passagedata><tw-passagedata pid="87" name="&quot;Like an insect&quot;" tags="medbay" position="3400,1200" size="100,100">&quot;It looked almost insect-like. Sharp limbs and mandibles. No fur.&quot;
 
-It seems like she almost immediately spots it as her eyes snap to the injury. She takes a step closer again, hovering her fingers above the charred flesh. &quot;Now what happened here...?&quot;
+&quot;Yeah, mine looked like that, too. Gross...&quot; Maia adds.
 
-&quot;I don&#39;t really know,&quot; you say carefully. You decided to be honest, but the situation is still unpredictable. It makes you a little nervous.
+Comet nods slowly, her eyes never leaving you. &quot;I see. Well, I guess we should keep an eye out then.&quot;
 
-Red doesn&#39;t respond for a moment, only focusing on the wound. &quot;You know how this looks, right?&quot; she finally asks bluntly. She doesn&#39;t seem worried, though.
+[[Nod]]
 
-[[&quot;Yes&quot;]]
-[[&quot;It could have been from anything&quot;]]
+(set: $shape to &quot;insect-like&quot;)</tw-passagedata><tw-passagedata pid="88" name="Take a closer look" tags="storage" position="3900,1175" size="100,100">You crouch beside the creature.
 
-(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="42" name="&quot;I&#39;m fine, okay?&quot;" tags="" position="900,2900" size="100,100">You can&#39;t let her see the burn wound. You can&#39;t risk a bad reaction. &quot;I&#39;m fine, okay? These cuts are nothing, so can we just get this over with?&quot; you ask, trying to simply seem impatient and not as if you&#39;re hiding something.
+Maia reaches out to stop you, but thinks better of it.
+ 
+You&#39;re not scaredof it.
 
-Red crosses her arms and considers for a moment. &quot;Fine, whatever. Let me at least disinfect those cuts. Who knows where those alien claws have been,&quot; she says with her same bored voice. &quot;Or would you like to do it yourself...?&quot; She manages to predict what you were about to say next.
+You&#39;ve never seen anything like it before. Yet it seems somewhat familiar.
+ 
+Comet looks down at you, then back at Kayne. &quot;You think this killed Lavos?&quot;
 
-&quot;Please,&quot; you confirm. If you&#39;re able to do it yourself, you can also disinfect the burn wound. Leaving it be could be bad.
+Kayne shrugs. &quot;If it did, I got some weak boys in my crew.&quot;
 
-Red shrugs and points casually toward the glass cupboards. &quot;You&#39;ll find all the shit you need over there, then. But if you die from some infection, don&#39;t come haunting me because of it.&quot; She then turns away from you and walks to the exit. &quot;Goodluck, tough guy,&quot; she says before closing the door behind her.
+(if: $description is true)[(if: $correct is true)[She crosses her arms. &quot;Well, Scraprat apparently saw something like this attacking Victor.&quot;
 
-[[Treat yourself]]
+Mac&#39;s eyes widen. &quot;We were looking for him. Is he alright?&quot;
 
-(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="43" name="&quot;Yes&quot;" tags="" position="625,3025" size="100,100">There&#39;s no use denying it. You know perfectly well how it looks. &quot;Yes.&quot;
+&quot;Yeah, he&#39;s fine. Don&#39;t know why the fuck he would wander off, though.&quot;
 
-&quot;Good,&quot; Red says boredly before stepping back and taking out her tablet to tap away at it once again. &quot;That means there&#39;s nothing to worry about. Probably.&quot;
+Kayne snorts. &quot;Fucking idiot...&quot;](else:)[She crosses her arms. You feel her gaze. &quot;Well, according to your description, rat, Victor was attacked by something else.&quot;
 
-Her reaction confuses you slightly. While you&#39;re relieved that she isn&#39;t accusing you of anything, her carelessness about the subject worries you somewhat. But you decide not to question it.
+Mac&#39;s eyes widen. &quot;We were looking for him. He was attacked?&quot;
 
-&quot;Honestly, those cuts don&#39;t seem to be something to worry about. If anything, Lavos seems to have done more serious damage to you than the supposed creature did. I&#39;ll have to treat that burn wound - it&#39;s bordering third-degree. Then I&#39;ll just disinfect the cuts. Sound good?&quot; She asks, but the way she says it tells you that she&#39;s already made up her mind.
+&quot;Found him with a head injury. Scrap saw something $size and $shape when it happened.&quot;
 
-[[Get treated]]
+&quot;Strange...&quot;
 
-(set: $trust to it +1)
-</tw-passagedata><tw-passagedata pid="44" name="&quot;It could have been from anything&quot;" tags="" position="775,3025" size="100,100">&quot;It could have been from anything...&quot; You refuse to assume the cause.
+Kayne snorts. &quot;Fucking idiot, that Victor...&quot;]]
 
-&quot;No, not really,&quot; Red says casually. &quot;It&#39;s radial in its shape, meaning a concentrated burn. Borderline third-degree in the centre and second-degree around it. Severe, yet quite small. That means short but intense exposure. Not to mention the beautiful hole it made in your shirt.&quot; She looks up from your wound to meet your eyes. You can swear you spot a faint smirk on her lips. &quot;It&#39;s from a photon pistol, Scraprat. Nothing else could have done that.&quot;
+(if: $VictorDeath is true)[Comet glances around. &quot;Where&#39;s Victor?&quot;
 
-You open your mouth to respond, but she beats you to it. &quot;You know what it looks like, yet you showed me the wound anyways. That means there&#39;s nothing to worry about. Probably.&quot;
+Mac snorts. &quot;Ran off ages ago. We were actually looking for him when this happened.
 
-She takes a step back and taps away at her tablet once again. &quot;Honestly, those cuts don&#39;t seem to be something to worry about. If anything, Lavos seems to have done more serious damage to you than the supposed creature did. I&#39;ll have to treat that burn wound, then I&#39;ll just disinfect the cuts. Sound good?&quot; She asks, but the way she says it tells you that she&#39;s already made up her mind.
+&quot;Shit...&quot;
 
-[[Get treated]]</tw-passagedata><tw-passagedata pid="45" name="Get treated" tags="" position="825,3200" size="100,100">Fortunately, Red is extremely efficient with her work. She quickly found everything she needed in the med bay even though sha had never been here before. And not even twenty minutes later, your wounds have been cleaned, disinfected, and bandaged, and the severe burn on your chest has been treated with some gun-shaped tool that emitted an awful electric buzzing sound when she used it.
+&quot;So you guys haven&#39;t seen him either...&quot;](else-if: $description is false)[Mac steps forward. &quot;You guys seen Victor, by the way? Ran off ages ago. We were looking for him when this shit happened.&quot;
 
-After applying the last bandage, Red steps back as if to assess her work on you, then turns to put everything away. &quot;You should be good now. Next time, just try dodging, though.&quot;
+You feel Comet&#39;s eyes for a split second. &quot;Yeah, actually. He got hurt. Red&#39;s taking care of him.&quot;
 
-(if: $influence &lt;= 1)[You can&#39;t help but chuckle a little. &quot;Yeah, I&#39;ll keep that in mind.&quot;]
-(else:)[You know she&#39;s just joking, but you can&#39;t help but get annoyed by it. You have to bite your tongue to stop yourself from saying something.]
+&quot;Hurt? How?&quot;
 
-Just then, you hear the sound of the door sliding open, and see Comet walking into the med bay as you look over. Compared to Red, Comet is much more the scavenger type. Her jacket is tied around her waist, allowing her sleeveless shirt to expose her defined arms. Messy, dark brown hair is tied in a low ponytail, and intense green eyes adorn her face with which she seems to peer right into your soul.
+&quot;Long story.&quot;
 
-&quot;You two done here? I want everyone at the lobby in five so that I can break the news.&quot; She speaks to both of you, but only looks at you.
+Kayne snorts. &quot;Fucking idiot...&quot;]
 
-&quot;Just finished up, yeah,&quot; Red confirms as she puts the last of her implements away.
+You stay quiet.
 
-&quot;Good. Then get moving.&quot; Comet steps out of the med bay before you can even respond.
+Movement.
 
-[[Go to the lobby]]
+(if: $influence &lt; 8)[[&quot;Did that thing just move?&quot;]](else:)[[&quot;Did that thing just move?&quot;|Say nothing1.5]]
+[[Say nothing|Say nothing1]]</tw-passagedata><tw-passagedata pid="89" name="See where it came from" tags="storage" position="4050,1175" size="100,100">You step closer to the creature. You glance around.
 
-(set: $treated to true)</tw-passagedata><tw-passagedata pid="46" name="Treat yourself" tags="" position="975,3200" size="100,100">It doesn&#39;t take long for you to realize you don&#39;t know what you&#39;re doing. You&#39;ve never treated a burn wound. And you have no clue what most of the tools and medications even are. You at least manage to clean some of the worst wounds and use what you believe to be a disinfectant. You also manage to find some bandages you use immediatly to cover your burn.
+There are many shelves and crates it could have used to hide.
 
-You can&#39;t bandage all of your wounds before you hear the door sliding open. You quickly cover your bandaged chest with your jacket, and look over to see who&#39;s entering. You spot Red stepping inside again, this time with Comet behind her. Compared to Red, Comet is much more the scavenger type. Her jacket is tied around her waist, allowing her sleeveless shirt to expose her defined arms. Messy, dark brown hair is tied in a low ponytail, and intense green eyes adorn her face with which she seems to peer right into your soul.
+It could have come from anywhere.
 
-&quot;I&#39;m not gonna ask you why the fuck you didn&#39;t just let Red do her job, &#39;cause I don&#39;t have time and honestly barely give a shit.&quot; Comet says as she walks inside and crosses her arms to glare at you. &quot;But are you at least done? I want everyone at the lobby in five to break the news.&quot;
+Comet looks at you, then back at Kayne. &quot;You think this killed Lavos?&quot;
 
-You&#39;re about to say no, but Comet interupts you. &quot;You look done enough. Come on, get moving. Don&#39;t think the rest would want to miss the sole witness.&quot; Comet steps out of the med bay before you can even respond. Red give you a small shrug before following suit.
+Kayne shrugs. &quot;If it did, I got some weak boys in my crew.&quot;
 
-[[Go to the lobby]]
+(if: $description is true)[(if: $correct is true)[She crosses her arms. &quot;Well, Scraprat apparently saw something like this attacking Victor.&quot;
 
-(set: $treated to false)</tw-passagedata><tw-passagedata pid="47" name="&quot;You can treat me&quot;" tags="" position="1050,2750" size="100,100">You sigh softly and and nod. &quot;You can do it.&quot;
+Mac&#39;s eyes widen. &quot;We were looking for him. Is he alright?&quot;
 
-Red nods and steps closer to take your arm again. After a moment, she let&#39;s your arm fall back to your side and checks your other arm next. She then holds it in place with one hand while the other reaches for the tablet at her side. She brings it up to your wounds and a soft light shines down from the device to scan the cuts. A couple of seconds after, she lets your arm fall back down to your side and taps away at the tablet again.
+&quot;Yeah, he&#39;s fine. Don&#39;t know why the fuck he would wander off, though.&quot;
 
-&quot;That wasn&#39;t too bad, hm?&quot; She stows the tablet and gestures to your jacket. &quot;Let me see the rest.&quot;
+Kayne snorts. &quot;Fucking idiot...&quot;](else:)[She crosses her arms. You feel her gaze. &quot;Well, according to your description, rat, Victor was attacked by something else.&quot;
 
-(if: $truthful is true)[[Take off your jacket]]
-(if: $truthful is false)[[&quot;I&#39;m fine, okay?&quot;]]</tw-passagedata><tw-passagedata pid="48" name="&quot;I&#39;ll treat myself&quot;" tags="" position="1200,2750" size="100,100">Doing it yourself doesn&#39;t seem like a bad idea to you. You&#39;d be able to treat your burn wound without her seeing it. (if: $truthful is true)[You were planning on being honest, but it&#39;s not like you&#39;ve been asked to take off your jacket and refused.]
+Mac&#39;s eyes widen. &quot;We were looking for him. He was attacked?&quot;
 
-You nod. &quot;Yeah, I&#39;d like to do it myself if you don&#39;t mind.&quot;
+&quot;Found him with a head injury. Scrap saw something $size and $shape when it happened.&quot;
 
-Red simply looks at you for a moment, her expression flat as ever. She then shrugs and gestures toward the glass cupboards. &quot;Well, everything you need will be over there, then. But if you die from an infection later, don&#39;t come haunting me because of it.&quot; With that, she turns away from you and heads to the exit. &quot;Goodluck, tough guy,&quot; she says just before the door slides shut behind her.
+&quot;Strange...&quot;
 
-[[Treat yourself]]
+Kayne snorts. &quot;Fucking idiot, that Victor...&quot;]]
 
-(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="49" name="Go to the lobby" tags="" position="900,3325" size="100,100">while walking with comet there is an oppressive silence. and Scraprat is thinking on what say while walking, if the trust is high talk on what happend to scraprat.
-if trust is low talk on what happend to lavos and what scrap saw.
-[[say what happend to you]]
-[[talk about what you think you saw]]</tw-passagedata><tw-passagedata pid="50" name="say what happend to you" tags="" position="900,3450" size="100,100">exsplain what you saw and think happend to lavos as well as what you think it was that attcked you. Comet is worried and asks more in how it looked and how dangerus scraprat think it is. Scraprat answers as best as he can but does not remmeber much. [[arrive at meeting]]</tw-passagedata><tw-passagedata pid="51" name="talk about what you think you saw" tags="" position="1025,3450" size="100,100">comet asks wat you saw lavos do and what he used to attack th alien. you don&#39;t know and so comet gets angry and calls you useless. says no wonder you got you shit kicked in. askes how the alien attacks and scraprat clamps up and does not want to talk about it.
-[[arrive at meeting]] </tw-passagedata><tw-passagedata pid="52" name="arrive at meeting" tags="" position="900,3575" size="100,100">enter the meeting and see all remaining crewmemmbers. comet brings up what happend to all crewmemmbers as well as giving all information that is known at this time. Victor is pissde that scraprat is alive but not lavos and begins to shit talk scraprat that he is a coward. the crew tals some more and then </tw-passagedata></tw-storydata>
+(if: $VictorDeath is true)[Comet glances around. &quot;Where&#39;s Victor?&quot;
+
+Mac snorts. &quot;Ran off ages ago. We were actually looking for him when this happened.
+
+&quot;Shit...&quot;
+
+&quot;So you guys haven&#39;t seen him either...&quot;](else-if: $description is false)[Mac steps forward. &quot;You guys seen Victor, by the way? Ran off ages ago. We were looking for him when this shit happened.&quot;
+
+You feel Comet&#39;s eyes for a split second. &quot;Yeah, actually. He got hurt. Red&#39;s taking care of him.&quot;
+
+&quot;Hurt? How?&quot;
+
+&quot;Long story.&quot;
+
+Kayne snorts. &quot;Fucking idiot...&quot;]
+
+You stay quiet.
+
+Movement.
+
+(if: $influence &lt; 8)[[&quot;Did that thing just move?&quot;]](else:)[[&quot;Did that thing just move?&quot;|Say nothing1.5]]
+[[Say nothing|Say nothing1]]</tw-passagedata><tw-passagedata pid="90" name="Say nothing1" tags="storage" position="4050,1300" size="100,100">You don&#39;t say anything.
+
+*You don&#39;t want to.*
+
+The creature springs up right next to you.
+
+And rushes past.
+
+It pounces directly at Maia, its mandibles primed to taste flesh. A scream erupts from her deep inside her throat. Blood spills as the creature latches onto Maia&#39;s arm and begins to carve.
+
+&quot;Maia!&quot; Comet rushes to her.
+
+A bang.
+
+A thud.
+
+The creature lies motionless on the floor again. Maia stumbles into Comet&#39;s arms.
+
+Kayne steps over to it.
+
+Another bang.
+
+And another bang.
+
+He stows his pistol.
+
+[[Check on Maia|Maia Bad]]
+[[Say nothing|Say nothing2]]
+
+(set: $MaiaHealthy to false)(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="91" name="&quot;Did that thing just move?&quot;" tags="storage" position="3900,1300" size="100,100">&quot;Did that thing just fucking move?&quot;
+
+All heads turn to you in an instant.
+
+The creature springs up right next to you.
+
+And rushes past.
+
+It pounces directly at Maia, its mandibles primed to taste flesh.
+
+A bang.
+
+A thud.
+
+Maia is frozen, her mouth half open. The creature lies motionless on the floor again.
+
+Kayne steps over to it.
+
+Another bang.
+
+And another bang.
+
+He stows his pistol.
+
+[[Check on Maia|Maia Good]]
+[[Say nothing|Say nothing2]]
+
+(set: $MaiaHealthy to true)(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="92" name="&quot;Even after what happened?&quot;" tags="medbay" position="875,1750" size="100,100">&quot;Even after what happened?&quot;
+
+Her eyes narrow. &quot;We always knew this job was dangerous. And we don&#39;t even know what happened. As much as it pains me, one death is not reason enough to abandon this. Too much has gone into it.&quot;
+
+Her face relaxes again. &quot;Be at the lobby in ten.&quot;
+
+She looks at Red again. &quot;Make sure her actually comes.&quot;
+
+Red nods.
+
+Comet give you one last look, then heads for the door.
+
+Comet stops at the exit to glance back. &quot;Don&#39;t forget to thank your nurse.&quot;
+
+She leaves.
+
+[[Thank Red]]</tw-passagedata><tw-passagedata pid="93" name="&quot;I know&quot;" tags="medbay" position="725,1750" size="100,100">&quot;I know.&quot; You didn&#39;t join the Redshift for nothing.
+
+Comet nods. &quot;Good to see you&#39;re still somewhat reasonable. Then I&#39;ll see you at the lobby in ten with everyone else.&quot;
+
+She looks at Red again. &quot;Make sure her actually comes.&quot;
+
+Red nods.
+
+Comet give you one last look, then heads for the door.
+
+Comet stops at the exit to glance back. &quot;Don&#39;t forget to thank your nurse.&quot;
+
+She leaves.
+
+
+[[Thank Red]]</tw-passagedata><tw-passagedata pid="94" name="&quot;There has to be&quot;" tags="hallway" position="1600,2025" size="100,100">&quot;There has to be.&quot; The pylon outside is proof enough.
+
+She smiles. &quot;I hope so. Otherwise we&#39;re hear for nothing.&quot;
+
+This just isn&#39;t the right place. It&#39;s deeper.
+
+There&#39;s no use looking here.
+
+&quot;Let&#39;s keep going.&quot;
+
+[[Move on]]</tw-passagedata><tw-passagedata pid="95" name="Thank Red" tags="medbay" position="800,1875" size="100,100">You only now notice all your bandages. &quot;Thanks, Red...&quot;
+
+She steps closer to your bed. &quot;Any pain?&quot;
+
+Her voice is flat.
+
+&quot;Not a lot.&quot;
+
+&quot;If it starts hurting so much you wanna die, come to me again. But only then.&quot;
+
+She tightens one of your bandages.
+
+You don&#39;t know if she&#39;s joking.
+
+&quot;You were covered in cuts. Strange shapes.&quot;
+
+[[&quot;What was strange?&quot;]]
+[[&quot;At least I&#39;m alive&quot;]]</tw-passagedata><tw-passagedata pid="96" name="&quot;What was strange?&quot;" tags="medbay" position="1025,1825" size="100,100">&quot;What was strange about them?&quot;
+
+She shrugs. &quot;Just strange. Alien must have had very jagged claws or something.&quot;
+
+&quot;You think it was a grey?&quot;
+
+&quot;No. But what do I know? Victor blames you, you know?&quot;
+
+Your not surprised.
+
+She steps back from your bed.
+
+&quot;We should go.&quot;
+
+&quot;Right...&quot;
+
+You slide out of the bed. The pain is less than you thought it would be.
+
+[[Head to the lobby]]</tw-passagedata><tw-passagedata pid="97" name="&quot;At least I&#39;m alive&quot;" tags="medbay" position="1100,2000" size="100,100">&quot;At least I&#39;m alive.&quot;
+
+&quot;True. Lavos wishes he could complain about some cuts.&quot;
+
+Her voice remains flat. Does she even care?
+
+&quot;Don&#39;t let Victor hear you saying things like that.&quot;
+
+&quot;Victor blames you, you know?&quot;
+
+Somehow, you&#39;re not surprised.
+
+She steps back from your bed.
+
+&quot;We should go.&quot;
+
+&quot;Right...&quot;
+
+You slide out of the bed. The pain is less than you thought it would be.
+
+[[Head to the lobby]]</tw-passagedata><tw-passagedata pid="98" name="Say nothing2" tags="storage" position="4050,1425" size="100,100">You watch as Comet comforts Maia wraps her wound with a piece of fabric.
+
+Kayne appears in front of you.
+
+&quot;You a blind motherfucker, or just a motherfucker?&quot;
+
+Heads turn to you. You take a step back.
+
+Kayne steps closer. &quot;Not only did it ignore you completely, but you let it attack the girl without a fucking word.&quot;
+
+Maia wants to speak. But doesn&#39;t.
+
+His eyes narrow. &quot;You gonna explain that one to me, bot?&quot;
+
+[[&quot;I didn&#39;t see it&quot;]]
+[[Blame him]]
+
+(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="99" name="Say nothing1.5" tags="storage" position="4200,1300" size="100,100">You open your mouth to speak. But the words don&#39;t come out.
+
+*You don&#39;t want them to.*
+
+The creature springs up right next to you.
+
+And rushes past.
+
+It pounces directly at Maia, its mandibles primed to taste flesh. A scream erupts from deep inside her throat. Blood spills as the creature latches onto Maia&#39;s arm and begins to carve.
+
+&quot;Maia!&quot; Comet rushes to her.
+
+A bang.
+
+A thud.
+
+Maia stumbles into Comet&#39;s arms. The creature lies motionless on the floor again.
+
+Kayne steps over to it.
+
+Another bang.
+
+And another bang.
+
+He stows his pistol.
+
+[[Check on Maia|Maia Bad]]
+[[Say nothing|Say nothing2]]
+
+(set: $MaiaHealthy to false)(set: $trust to it -1)</tw-passagedata><tw-passagedata pid="100" name="Maia Good" tags="storage" position="3900,1550" size="100,100">You rush to Maia&#39;s side.
+
+&quot;You okay?&quot;
+
+She nods her head, but she looks unsure. &quot;I... I think so...&quot;
+
+It happened so fast. She didn&#39;t even have time to scream.
+
+Comet places a hand on Maia&#39;s shoulder. &quot;Good job on the warning, Scrap.&quot;
+
+&quot;Agreed.&quot; Kayne kicks the corpse. &quot;But at the same time... You shouldn&#39;t be standing there all happy and unscathed. This oversized roach went for the girl... while you were right next to it.&quot;
+
+His eyes narrow.
+
+[[&quot;Maybe it prefers women&quot;]]
+[[&quot;What are you suggesting?&quot;]]
+
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="101" name="Maia Bad" tags="storage" position="4200,1425" size="100,100">You rush to Maia. But before you can reach her, Kayne appears in front of you.
+
+&quot;You a blind motherfucker, or just a motherfucker?&quot;
+
+Heads turn to you. You take a step back.
+
+Kayne steps closer. &quot;Not only did it ignore you completely, but you let it attack the girl without a fucking word.&quot;
+
+Maia wants to speak. But doesn&#39;t.
+
+His eyes narrow. &quot;You gonna explain that one to me, bot?&quot;
+
+[[&quot;I didn&#39;t see it&quot;]]
+[[Blame him]]</tw-passagedata><tw-passagedata pid="102" name="&quot;Maybe it prefers women&quot;" tags="storage" position="3975,1800" size="100,100">&quot;Maybe it prefers women?&quot;
+(if: $influence &gt; 8)[
+*Maybe*
+]
+&quot;You think you&#39;re fucking funny, rat?&quot;
+
+(if: $MaiaHealthy is true)[Maia giggles. Kayne shoots her a glare. She stops.
+(if: $trust &gt; 0)[
+&quot;Kayne, it&#39;s fine. We have bigger questions to be asking.&quot; Comet hides a small smile.
+
+He snorts. &quot;Fine. But I ain&#39;t happy.&quot;](else:)[
+No one speaks.
+
+Maia&#39;s eyes.
+
+Kayne snorts. &quot;Whatever. We got bigger things to worry about.&quot;]](else-if: $trust &gt; 0)[&quot;Kayne, it&#39;s fine. We have bigger questions to be asking.&quot; Comet tightens the fabric around Maia&#39;s wound. She winces.
+
+He snorts. &quot;Fine. But I ain&#39;t happy.&quot;](else:)[No one speaks.
+
+Maia winces as Comet tightens the fabric.
+
+Kayne snorts. &quot;Whatever. We got bigger things to worry about.&quot;]
+
+Mac steps forward. &quot;We need to figure out where this thing came from. Where there&#39;s one, there could be more.&quot;
+
+Comet looks at Maia for a moment. &quot;Maybe we should just cut our losses... We already lost one.(if: $VictorDeath is true)[ Maybe two...]&quot;
+
+&quot;Not a fuck&#39;s chance we will,&quot; Kayne barks. &quot;I ain&#39;t letting some insects turn this blind into a fold, got it?&quot;
+
+No one objects.
+
+[[&quot;What&#39;s the plan?&quot;]]
+[[Say nothing|Say nothing3]]
+
+(set: $trust to it +1)</tw-passagedata><tw-passagedata pid="103" name="&quot;What are you suggesting?&quot;" tags="storage" position="4125,1800" size="100,100">&quot;What are you suggesting?&quot;
+(if: $influence &gt; 8)[
+*You know*]
+He shrugs. &quot;I don&#39;t know. You tell me, rat.&quot;
+
+(if: $MaiaHealthy is true)[Maia&#39;s eyes.
+(if: $trust &gt; 0)[
+Comet sighs. &quot;Kayne, it&#39;s fine. We have bigger questions to be asking.&quot;
+
+He snorts. &quot;Fine. But I ain&#39;t happy.&quot;](else:)[
+No one speaks.
+
+Kayne snorts. &quot;Whatever. We got bigger things to worry about.&quot;]](else-if: $trust &gt; 0)[&quot;Kayne, it&#39;s fine. We have bigger questions to be asking.&quot; Comet tightens the fabric around Maia&#39;s wound. She winces.
+
+He snorts. &quot;Fine. But I ain&#39;t happy.&quot;](else:)[No one speaks.
+
+Maia winces as Comet tightens the fabric.
+
+Kayne snorts. &quot;Whatever. We got bigger things to worry about.&quot;]
+
+Mac steps forward. &quot;We need to figure out where this thing came from. Where there&#39;s one, there could be more.&quot;
+
+Comet looks at Maia for a moment. &quot;Maybe we should just cut our losses... We already lost one.(if: $VictorDeath is true)[ Maybe two...]&quot;
+
+&quot;Not a fuck&#39;s chance we will,&quot; Kayne barks. &quot;I ain&#39;t letting some insects turn this blind into a fold, got it?&quot;
+
+No one objects.
+
+[[&quot;What&#39;s the plan?&quot;]]
+[[Say nothing|Say nothing3]]</tw-passagedata><tw-passagedata pid="104" name="&quot;I didn&#39;t see it&quot;" tags="storage" position="4050,1550" size="100,100">&quot;I didn&#39;t see it.&quot; 
+
+*You did* 
+
+&quot;It moved before I could say anything.&quot;
+
+He snorts. &quot;Alright. Then what about how it ignored you? You might have an ugly mug, but I don&#39;t reckon lil&#39; bug monsters care about that, eh?&quot;
+
+[[&quot;Maybe it prefers women&quot;]]
+[[&quot;What are you suggesting?&quot;]]</tw-passagedata><tw-passagedata pid="105" name="Blame him" tags="storage" position="4200,1550" size="100,100">&quot;Maybe Maia wouldn&#39;t have gotten hurt if you just shot earlier.&quot;
+
+Eyes narrow further. &quot;You gonna repeat that for me, bot...?&quot;
+
+Silence.
+
+&quot;Alright. Then what about how it ignored you? You might have an ugly mug, but I don&#39;t reckon lil&#39; bug monsters care about that, eh?&quot;
+
+[[&quot;Maybe it prefers women&quot;]]
+[[&quot;What are you suggesting?&quot;]]
+
+(set: $trust to it -1)
+(set: $influence to it +1)</tw-passagedata><tw-passagedata pid="106" name="&quot;What&#39;s the plan?&quot;" tags="storage" position="3975,1925" size="100,100">&quot;What&#39;s the plan, then?&quot;
+
+&quot;I&#39;ll tell you what the fucking plan is. It&#39;s the same goddamn one we came in here with. Find some good ol&#39; pasta.&quot; He smirks.
+
+&quot;We haven&#39;t found a single drop yet...&quot; Mac comments.
+
+&quot;We tried the easy way.&quot; Kayne looks at you. &quot;But the hard way remains. Ain&#39;t that right, Vox-bot?&quot;
+
+The gravichamber.
+
+[[&quot;It&#39;s too far&quot;]]
+[[Nod|Graviyessir]]</tw-passagedata><tw-passagedata pid="107" name="Say nothing3" tags="storage" position="4125,1925" size="100,100">You simply listen.
+
+Kayne slaps his hands together and smirks. &quot;Good. Then we keep doing what we&#39;ve been doing. We find some good ol&#39; pasta.&quot;
+
+&quot;We haven&#39;t found a single drop yet...&quot; Mac comments.
+
+&quot;We tried the easy way.&quot; Kayne looks at you. &quot;But the hard way remains. Ain&#39;t that right, Vox-bot?&quot;
+
+The gravichamber.
+
+[[&quot;It&#39;s too far&quot;]]
+[[Nod|Graviyessir]]</tw-passagedata><tw-passagedata pid="108" name="&quot;It&#39;s too far&quot;" tags="storage" position="3975,2050" size="100,100">&quot;It&#39;s too far inside the facility. We&#39;d need to-&quot;
+
+&quot;Nothing&#39;s too far, bot. Thought space travel would teach you that.&quot;
+
+You sigh.
+
+He smiles.
+
+&quot;So, everyone good on that, or should I remind y&#39;all why we&#39;re here in the first place?&quot;
+
+They nod and mutter their acceptance.
+
+&quot;Fantastic. Scraprat! We&#39;ll need to discuss this plan of yours.&quot;
+
+*Plan?*
+
+&quot;The rest of y&#39;all get ready.&quot;
+
+The group disperses. Kayne gestures you to follow him.
+
+*He owns you*
+
+[[Follow]]</tw-passagedata><tw-passagedata pid="109" name="Graviyessir" tags="storage" position="4125,2050" size="100,100">You nod.
+
+*Convenient*
+
+He smiles.
+
+&quot;So, everyone good on that, or should I remind y&#39;all why we&#39;re here in the first place?&quot;
+
+They nod and mutter their acceptance.
+
+&quot;Fantastic. Scraprat! We&#39;ll need to discuss this plan of yours.&quot;
+
+*Plan?*
+
+&quot;The rest of y&#39;all get ready.&quot;
+
+The group disperses. Kayne gestures you to follow him.
+
+*He owns you*
+
+[[Follow]]</tw-passagedata><tw-passagedata pid="110" name="Follow" tags="lobby" position="4050,2175" size="100,100">&quot;So, bot. Where&#39;s the pasta?&quot;
+
+You and Kayne stand alone in an office room. Dark. Just like everywhere else.
+
+His arms are crossed. He doesn&#39;t care for a compelx answer.
+
+[[&quot;In a gravichamber&quot;]]
+[[&quot;Deeper in the facility&quot;]]</tw-passagedata><tw-passagedata pid="111" name="&quot;In a gravichamber&quot;" tags="lobby" position="3975,2300" size="100,100">&quot;In a gravichamber, most likely. Only thing that can store a decent amount of nuclear pasta.&quot;
+
+&quot;Perfect! And where would that be?&quot;
+
+*Idiot*
+
+[[&quot;Deepest part of the facility&quot;]]
+[[&quot;Far below us&quot;]]</tw-passagedata><tw-passagedata pid="112" name="&quot;Deeper in the facility&quot;" tags="lobby" position="4125,2300" size="100,100">&quot;Deeper in the facility. No where here.&quot;
+
+&quot;I could guess as much, bot. Where exactly?&quot;
+
+&quot;In a gravichamber.&quot;
+
+&quot;Perfect! And where is that?&quot;
+
+*Idiot*
+
+[[&quot;Deepest part of the facility&quot;]]
+[[&quot;Far below us&quot;]]</tw-passagedata><tw-passagedata pid="113" name="&quot;Deepest part of the facility&quot;" tags="lobby" position="3975,2425" size="100,100">&quot;In the deepest part of the facility. It uses the gravity of the planet to-&quot;
+
+Kayne waves his hand to interupt you. &quot;That don&#39;t matter. Down&#39;s the way, then. How do we get there?&quot;
+
+[[&quot;An elevator&quot;]]
+[[&quot;An A/D Mantle&quot;]]</tw-passagedata><tw-passagedata pid="114" name="&quot;Far below us&quot;" tags="lobby" position="4125,2425" size="100,100">&quot;Far below us.&quot;
+
+&quot;Down&#39;s the way. Of course. And how exactly do we get there?&quot;
+
+[[&quot;An elevator&quot;]]
+[[&quot;An A/D Mantle&quot;]]</tw-passagedata><tw-passagedata pid="115" name="&quot;An elevator&quot;" tags="lobby" position="3975,2550" size="100,100">&quot;There should be some sort of elevator we can use.&quot;
+
+&quot;Fancy. So, we just take the elevator down, collect my pasta, and skedaddle?&quot;
+
+[[&quot;Not so simple&quot;]]
+[[&quot;Basically&quot;]]</tw-passagedata><tw-passagedata pid="116" name="&quot;An A/D Mantle&quot;" tags="lobby" position="4125,2550" size="100,100">&quot;We&#39;ll have to use the A/D Mantle in order to travel down to the deepest sectors.&quot;
+
+&quot;So, a fancy elevator? Just say that next time, bot.&quot;
+
+*Idiot*
+
+&quot;Just take the elevator down, collect my pasta, and skedaddle?&quot;
+
+[[&quot;Not so simple&quot;]]
+[[&quot;Basically&quot;]]</tw-passagedata><tw-passagedata pid="117" name="&quot;Not so simple&quot;" tags="lobby" position="3975,2675" size="100,100">&quot;It&#39;s not so simple. The Latter Sectors won&#39;t have the artificial gravity turned on so-&quot;
+
+&quot;English, rat. English.&quot;
+
+You sigh.
+
+&quot;We&#39;ll have to divert power to the sectors we want to go to. Or we&#39;ll pop when we go down.&quot;
+
+&quot;Gotcha. Divert power, go down, find pasta, get out.&quot;
+
+[[&quot;Extraction would be complex&quot;]]
+[[&quot;There are more steps&quot;]]</tw-passagedata><tw-passagedata pid="118" name="&quot;Basically&quot;" tags="lobby" position="4125,2675" size="100,100">&quot;Basically. But we&#39;ll have to divert power to the lower sectors first. Otherwise we&#39;ll pop when we go down.&quot;
+
+&quot;Gravity&#39;s a bitch. So, divert power, go down, find pasta, get out.&quot;
+
+[[&quot;Extraction would be complex&quot;]]
+[[&quot;There are more steps&quot;]]</tw-passagedata><tw-passagedata pid="119" name="&quot;Extraction would be complex&quot;" tags="lobby" position="3975,2800" size="100,100">&quot;Extraction of the pasta would be a little complex. We&#39;d have to-&quot;
+
+&quot;We&#39;ll figure it out when we get there, yeah?&quot; He smiles. &quot;Besides, if I had all the answers already, I&#39;d have no reason to keep you around.&quot;
+
+*You&#39;re nothing to him*
+
+&quot;I&#39;ll be honest with you, Scrap.&quot; 
+
+He paces around you. 
+
+&quot;I don&#39;t give a shit about you. You&#39;re here &#39;cause you&#39;re useful. You know this.&quot;
+
+He pats your shoulder.
+
+&quot;But when I see you next to the corpse of one of my boys... And when I see one of my girls almost die &#39;cause of your cowardice...&quot;
+
+He stops in front of you and straightens your jacket.
+
+&quot;I like my boys and girls. I don&#39;t like you. A part of me just wants to shoot ya between those lil&#39; corpo eyes of yours. Cover all my bases. But I don&#39;t. You know why?&quot;
+
+[[&quot;You need me&quot;]]
+[[Say nothing|Say nothing4]]</tw-passagedata><tw-passagedata pid="120" name="&quot;There are more steps&quot;" tags="lobby" position="4125,2800" size="100,100">&quot;There are many more steps in terms of actually getting the nuclear pasta out. We&#39;d have to-&quot;
+
+&quot;We&#39;ll figure it out when we get there, yeah?&quot; He smiles. &quot;Besides, if I had all the answers already, I&#39;d have no reason to keep you here.&quot;
+
+*You&#39;re nothing to him*
+
+&quot;I&#39;ll be honest with you, Scrap.&quot; 
+
+He paces around you. 
+
+&quot;I don&#39;t give a shit about you. You&#39;re here &#39;cause you&#39;re useful. You know this.&quot;
+
+He pats your shoulder.
+
+&quot;But when I see you next to the corpse of one of my boys... And when I see one of my girls almost die &#39;cause of your cowardice...&quot;
+
+He stops in front of you and straightens your jacket.
+
+&quot;I like my boys and girls. I don&#39;t like you. A part of me just wants to shoot ya between those lil&#39; corpo eyes of yours. Cover all my bases. But I don&#39;t. You know why?&quot;
+
+[[&quot;You need me&quot;]]
+[[Say nothing|Say nothing4]]</tw-passagedata><tw-passagedata pid="121" name="&quot;You need me&quot;" tags="gore" position="4150,3150" size="100,100">&quot;You need me.&quot;
+
+*Until he doesn&#39;t*
+
+&quot;I like pasta, bot. It&#39;s my favourite dish. And you just happen to point me in the right direction.&quot;
+
+He takes a step back and pats the pistol on his belt.
+
+&quot;Stop pointing. And I&#39;ll stop needing.&quot;
+
+Silence.
+
+He smiles.
+
+&quot;Go get ready, Doug.&quot;
+
+[[Leave|Leave Kayne]]</tw-passagedata><tw-passagedata pid="122" name="Say nothing4" tags="gore" position="4275,3050" size="100,100">You don&#39;t say anything. But you know.
+
+He smiles at you.
+
+&quot;You&#39;re a smart guy, bot. You should know I like pasta. It&#39;s my favourite dish. And you just happen to point me in the right direction.&quot;
+
+He takes a step back and pats the pistol on his belt.
+
+&quot;Stop pointing. And I&#39;ll stop caring.&quot;
+
+Silence.
+
+His smile widens.
+
+&quot;Go get ready, Doug.&quot;
+
+[[Leave|Leave Kayne]]</tw-passagedata><tw-passagedata pid="123" name="Leave Kayne" tags="gore" position="5100,1100" size="100,100">*He&#39;ll kill you when he gets the chance*
+
+&quot;Scraprat, you doing okay?&quot;
+
+&quot;I&#39;m fine.&quot;
+
+*Would they even stop him?*
+
+&quot;Hey, where are you headed?&quot;
+
+&quot;Bathroom.&quot;
+
+&quot;Alright. Be quick.&quot;
+
+*Have they ever cared?*
+
+The med bay door slides open.
+
+[[Enter]]</tw-passagedata><tw-passagedata pid="124" name="Enter" tags="medbay" position="5175,1225" size="100,100">Red looks up as you enter. (if: $VictorDeath is false)[Victor still lies on the bed beside her.]
+
+&quot;Ah, Scraprat. You need something?&quot; Her voice is flat as usual.
+
+*She doesn&#39;t care*
+
+&quot;Headache.&quot;
+
+&quot;Oh. I&#39;m sure you&#39;ll find something in one of those glass cupboards.&quot;
+
+&quot;Thanks.&quot;
+
+*Nothing will help you*
+
+The cupboard opens. Pills for a headache.
+
+</tw-passagedata><tw-passagedata pid="125" name="Untitled Passage" tags="" position="5875,1150" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
